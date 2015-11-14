@@ -18,9 +18,6 @@
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
           type="text/css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../../assets/js/count_up_timer.js"></script>
 </head>
 <body id="page-top" class="index">
 
@@ -39,24 +36,15 @@
     <div class="container text-center">
         <div class="row">
             <div class="intro-text col-lg-12">
-                <div class="col-lg-11 boarder">
-                    <span class="skills">Result</span></br>
-                    <?php echo $query[0]; ?> of 10 </br>
-                    <?php echo $query[0] * 10 ?>% </br>
-                    <?php echo $query[1] ?> </br>
-                    Time spent &nbsp;<label id="minutes_f"></label>:<label id="seconds_f"></label>
+                <div class="col-lg-11">
+                    <?php
+                        foreach($query as $questions){
+                            echo ($questions[0]);
+                        }
+                    ?>
                 </div>
                 </br>
-                <form action="viewAnswerDescription" method="get">
-                    <div class="col-lg-6">
-                        <input class="btn btn-outline next-btn" type="submit" value="Check your answers"/>
-                    </div>
-                </form>
-                <form method="get" action="http://localhost/awt_cw1_2012043/index.php/question/loadTenQuestionIds">
-                    <div class="col-lg-6">
-                        <input class="btn btn-outline next-btn" type="submit" value="Try Again"/>
-                    </div>
-                </form>
+
             </div>
         </div>
     </div>

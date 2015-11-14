@@ -11,14 +11,16 @@
  *
  * @author Ershadi
  */
-class Question extends CI_Controller {
+class Question extends CI_Controller
+{
 
     /**
      * 3 questions with the difficulty level 1
      * 4 questions with the difficulty level 2
      * 3 questions with the difficulty level 3
      */
-    function loadTenQuestionIds() {
+    function loadTenQuestionIds()
+    {
         $this->load->model('QuestionModel');
         $statusOneQuestionIds = $this->QuestionModel->getThreeRandomStatusOneQuestions();
         $statusTwoQuestionIds = $this->QuestionModel->getFourRandomStatusTwoQuestions();
@@ -38,10 +40,11 @@ class Question extends CI_Controller {
         $this->session->set_userdata('correctQuestions', array());
         $this->session->set_userdata('wrongQuestions', array());
 
-        $this->loadQuestion(0);
+        $this->loadQuestion(0, true);
     }
 
-    function loadQuestion($index) {
+    function loadQuestion($index, $answerProvided)
+    {
         //load the session library
         $this->load->library('session');
         $questionId = $this->session->userdata('questionIds')[$index];
@@ -59,32 +62,39 @@ class Question extends CI_Controller {
         }
 
         $questionData['query'][0]->answers = $answers;
+        $questionData['query'][0]->answerProvided = $answerProvided;
         $this->load->view('QuestionView', $questionData);
     }
 
-    function checkAnswers() {
-        $this->load->model('QuestionModel');
-        $answerResponse = $this->QuestionModel->getCorrectAnswerForAQuestion();
+    function checkAnswers()
+    {
+        if (isset($_GET['answer'])) {
+            $this->load->model('QuestionModel');
+            $answerResponse = $this->QuestionModel->getCorrectAnswerForAQuestion();
 
-        //load the session library
-        $this->load->library('session');
-        if ($answerResponse[3] === "correct") {
-            $correctQuestions = $this->session->userdata('correctQuestions');
-            array_push($correctQuestions, $answerResponse[1]);
-            $this->session->set_userdata('correctQuestions', $correctQuestions);
+            //load the session library
+            $this->load->library('session');
+            if ($answerResponse[3] === "correct") {
+                $correctQuestions = $this->session->userdata('correctQuestions');
+                array_push($correctQuestions, $answerResponse[1]);
+                $this->session->set_userdata('correctQuestions', $correctQuestions);
+            } else {
+                $wrongQuestions = $this->session->userdata('wrongQuestions');
+                array_push($wrongQuestions, $answerResponse[1]);
+                $this->session->set_userdata('wrongQuestions', $wrongQuestions);
+            }
+            if ($answerResponse[0] < 10) {
+                $this->loadQuestion($answerResponse[0], true);
+            } else {
+                $this->generateFeedback();
+            }
         } else {
-            $wrongQuestions = $this->session->userdata('wrongQuestions');
-            array_push($wrongQuestions, $answerResponse[1]);
-            $this->session->set_userdata('wrongQuestions', $wrongQuestions);
-        }
-        if ($answerResponse[0] < 10) {
-            $this->loadQuestion($answerResponse[0]);
-        } else {
-            $this->generatefeedback();
+            $this->loadQuestion($_GET['question_number'] - 1, false);
         }
     }
 
-    function generatefeedback() {
+    function generateFeedback()
+    {
         //load the session library
         $this->load->library('session');
         $correctQuestions = $this->session->userdata('correctQuestions');
@@ -107,6 +117,40 @@ class Question extends CI_Controller {
 
         $feedbackData['query'] = array(sizeof($correctQuestions), $feedback);
         $this->load->view('FeedbackView', $feedbackData);
+    }
+
+    function viewAnswerDescription()
+    {
+        $this->load->library('session');
+        $questionIds = $this->session->userdata('questionIds');
+        $correctQuestionIds = $this->session->userdata('correctQuestions');
+        $wrongQuestionIds = $this->session->userdata('wrongQuestions');
+
+
+        $feedbackSummary['query'] = array();
+
+        foreach ($questionIds as $questionId) {
+            $this->load->model('QuestionModel');
+
+            foreach ($correctQuestionIds as $cqId) {
+                if ($questionId == $cqId) {
+                    $answerResponse = $this->QuestionModel->getQuestionData($questionId);
+                    print_r($answerResponse);
+                    $data = array($questionId, "correct", $answerResponse[0]->question_detail);
+                    array_push($feedbackSummary['query'], $data);
+                }
+            }
+
+            foreach ($wrongQuestionIds as $wqId) {
+                if ($questionId == $wqId) {
+                    $answerResponse = $this->QuestionModel->getQuestionData($questionId);
+                    $data = array($questionId, "correct", $answerResponse[0]->question_detail);
+                    array_push($feedbackSummary['query'], $data);
+                }
+            }
+        }
+
+        $this->load->view('FeedbackDescriptionView',$feedbackSummary);
     }
 
 }
