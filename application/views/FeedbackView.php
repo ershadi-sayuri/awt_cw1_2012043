@@ -41,9 +41,13 @@
             <div class="intro-text col-lg-12">
                 <div class="col-lg-11 boarder">
                     <span class="skills">Result</span></br>
+                    <!-- correct answer count-->
                     <?php echo $query[0]; ?> of 10 </br>
+                    <!-- correct percentage-->
                     <?php echo $query[0] * 10 ?>% </br>
+                    <!-- feedback description-->
                     <?php echo $query[1] ?> </br>
+                    <!-- time spent foe the quiz-->
                     Time spent &nbsp;<label id="minutes_f"></label>:<label id="seconds_f"></label>
                 </div>
                 </br>

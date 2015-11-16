@@ -33,18 +33,24 @@
 
 <!-- Header -->
 <header>
-    <div class="container text-center">
+    <div class="container ">
         <div class="row">
             <div class="intro-text col-lg-12">
                 <div class="col-lg-11">
-                    <?php
-                        foreach($query as $questions){
-                            echo ($questions[0]);
-                        }
-                    ?>
+                    <h2>Answer Sumamry</h2>
+                    <table class="table">
+                        <?php foreach ($query as $questions) { ?>
+                            <tr>
+                                <!-- question number -->
+                                <td><?php echo $questions[0] ?></td>
+                                <!-- correct or wrong -->
+                                <td><?php echo $questions[1] ?></td>
+                                <!-- answer description -->
+                                <td><?php echo $questions[2] ?></td>
+                            </tr>
+                        <?php } ?>
+                    </table>
                 </div>
-                </br>
-
             </div>
         </div>
     </div>

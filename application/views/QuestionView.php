@@ -44,29 +44,38 @@
                 <div class="progress-bar-default">
                     <div class="progress-bar-fill" role="progressbar" aria-valuenow="60" aria-valuemin="0"
                          aria-valuemax="100" style="width: <?php echo ($query[0]->question_number - 1) * 10 ?>%">
+                        <!-- progress bar-->
                         <?php echo ($query[0]->question_number - 1) * 10 ?>%
                     </div>
                 </div>
                 <div class="col-md-8 boarder">
                     <div class="intro-text">
-                        <span
-                            class="skills"><?php echo($query[0]->question_number . ") " . $query[0]->question_detail) ?></span></br>
+                        <span class="skills">
+                            <!-- question -->
+                            <?php echo($query[0]->question_number . ") " . $query[0]->question_detail) ?></span></br>
                         <?php foreach ($query[0]->answers as $answer) { ?>
+                                    <!-- answers -->
                                     <input type="radio" name="answer" value="<?php echo $answer[1] ?>"/>
                                     <span class="skills"><?php echo $answer[0] ?></span></br>
                                     <?php
                                 }
                         ?>
                         </br>
+                        <!-- alert box -->
                         <?php if ($query[0]->answerProvided == false) { ?>
                             <div class="alert alert-danger" role="alert">Please select an answer and press next</div>
                         <?php } ?>
                         <div id="next-btn">
-                            <input class="btn btn-outline" type="submit" value="Next" onclick="getLastTime()"/>
+                            <?php if ($query[0]->question_number == 10) { ?>
+                                <input class="btn btn-outline" type="submit" value="Submit" onclick="getLastTime()"/>
+                            <?php } else { ?>
+                                <input class="btn btn-outline" type="submit" value="Next" onclick="getLastTime()"/>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-1"></div>
+                <!-- timer -->
                 <div class="col-md-3 boarder text-center">
                     Time Spent
                     <h1>

@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99eef3f2-3181-4c93-92a9-393ea2e17b71" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/FeedbackDescriptionView.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/count_up_timer.js" />
-      <change type="DELETED" beforePath="C:\wamp\www\awt_cw1_2012043\application\models\AnswerModel.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\awt_cw1_2012043\nbproject\private\private.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\awt_cw1_2012043\nbproject\project.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\awt_cw1_2012043\application\controllers\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\awt_cw1_2012043\application\controllers\welcome.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\awt_cw1_2012043\application\models\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\awt_cw1_2012043\application\views\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\awt_cw1_2012043\application\views\welcome_message.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/FeedbackDescriptionView.php" afterPath="$PROJECT_DIR$/application/views/FeedbackDescriptionView.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/FeedbackView.php" afterPath="$PROJECT_DIR$/application/views/FeedbackView.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Question.php" afterPath="$PROJECT_DIR$/application/controllers/Question.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/QuestionModel.php" afterPath="$PROJECT_DIR$/application/models/QuestionModel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/QuestionView.php" afterPath="$PROJECT_DIR$/application/views/QuestionView.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/bootstrap.css" afterPath="$PROJECT_DIR$/assets/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/freelancer.css" afterPath="$PROJECT_DIR$/assets/css/freelancer.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="awt_cw1_2012043.iws" />
@@ -35,33 +34,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Question.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Question.php">
+      <file leaf-file-name="QuestionModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/QuestionModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42544731">
-              <caret line="126" column="64" selection-start-line="126" selection-start-column="64" selection-end-line="126" selection-end-column="64" />
+            <state vertical-scroll-proportion="-4.6923075">
+              <caret line="73" column="81" selection-start-line="73" selection-start-column="81" selection-end-line="73" selection-end-column="81" />
               <folding>
-                <element signature="e#7#191#0#PHP" expanded="true" />
+                <marker date="1447643165338" expanded="true" signature="525:600" placeholder="SELECT quest..question..." />
+                <marker date="1447643165338" expanded="true" signature="874:949" placeholder="SELECT quest..question..." />
+                <marker date="1447643165338" expanded="true" signature="1226:1301" placeholder="SELECT quest..question..." />
+                <marker date="1447643165338" expanded="true" signature="1593:1648" placeholder="SELECT * FRO..question..." />
+                <marker date="1447643165338" expanded="true" signature="1950:2003" placeholder="SELECT * FRO..answer..." />
+                <marker date="1447643165338" expanded="true" signature="2427:2492" placeholder="SELECT * FRO..answer..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="count_up_timer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/count_up_timer.js">
+      <file leaf-file-name="FeedbackDescriptionView.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/FeedbackDescriptionView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuestionView.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/QuestionView.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.576923">
-              <caret line="73" column="47" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
+            <state vertical-scroll-proportion="14.153846">
+              <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -70,18 +64,18 @@
       <file leaf-file-name="FeedbackView.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/FeedbackView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.9615383">
-              <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+            <state vertical-scroll-proportion="-0.23076923">
+              <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FeedbackDescriptionView.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/FeedbackDescriptionView.php">
+      <file leaf-file-name="QuestionView.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/QuestionView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.269231">
-              <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+            <state vertical-scroll-proportion="-0.8499062">
+              <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -109,13 +103,14 @@
       <list>
         <option value="$PROJECT_DIR$/database/database.sql" />
         <option value="$PROJECT_DIR$/assets/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/assets/css/freelancer.css" />
-        <option value="$PROJECT_DIR$/application/views/QuestionView.php" />
-        <option value="$PROJECT_DIR$/application/views/FeedbackView.php" />
-        <option value="$PROJECT_DIR$/assets/js/count_up_timer.js" />
         <option value="$PROJECT_DIR$/application/controllers/Feedback.php" />
-        <option value="$PROJECT_DIR$/application/views/FeedbackDescriptionView.php" />
+        <option value="$PROJECT_DIR$/assets/js/count_up_timer.js" />
+        <option value="$PROJECT_DIR$/assets/css/freelancer.css" />
         <option value="$PROJECT_DIR$/application/controllers/Question.php" />
+        <option value="$PROJECT_DIR$/application/models/QuestionModel.php" />
+        <option value="$PROJECT_DIR$/application/views/FeedbackDescriptionView.php" />
+        <option value="$PROJECT_DIR$/application/views/FeedbackView.php" />
+        <option value="$PROJECT_DIR$/application/views/QuestionView.php" />
       </list>
     </option>
   </component>
@@ -163,9 +158,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -195,24 +189,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="awt_cw1_2012043" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="awt_cw1_2012043" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -318,12 +294,13 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../paminili.org" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
@@ -606,12 +583,13 @@
       <updated>1447349041228</updated>
       <workItem from="1447349042605" duration="1590000" />
       <workItem from="1447398950163" duration="15729000" />
-      <workItem from="1447478988122" duration="17841000" />
+      <workItem from="1447478988122" duration="27614000" />
+      <workItem from="1447640365228" duration="6542000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35160000" />
+    <option name="totallyTimeSpent" value="51475000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -653,10 +631,63 @@
     <entry file="file://$PROJECT_DIR$/application/controllers/Question.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="52" selection-start-line="64" selection-start-column="52" selection-end-line="64" selection-end-column="52" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/count_up_timer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/FeedbackView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="7" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/QuestionModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="43" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="43" />
           <folding>
-            <element signature="e#7#191#0#PHP" expanded="true" />
+            <marker date="1447643165338" expanded="true" signature="525:600" placeholder="SELECT quest..question..." />
+            <marker date="1447643165338" expanded="true" signature="874:949" placeholder="SELECT quest..question..." />
+            <marker date="1447643165338" expanded="true" signature="1226:1301" placeholder="SELECT quest..question..." />
+            <marker date="1447643165338" expanded="true" signature="1593:1648" placeholder="SELECT * FRO..question..." />
+            <marker date="1447643165338" expanded="true" signature="1950:2003" placeholder="SELECT * FRO..answer..." />
+            <marker date="1447643165338" expanded="true" signature="2427:2492" placeholder="SELECT * FRO..answer..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/QuestionView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="38" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/FeedbackDescriptionView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="33" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Question.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="52" selection-start-line="64" selection-start-column="52" selection-end-line="64" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -681,12 +712,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="56" column="55" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
           <folding>
-            <marker date="1447153231625" expanded="true" signature="-1:-1" placeholder="SELECT quest..question..." />
-            <marker date="1447153231625" expanded="true" signature="-1:-1" placeholder="SELECT quest..question..." />
-            <marker date="1447153231625" expanded="true" signature="-1:-1" placeholder="SELECT quest..question..." />
-            <marker date="1447153231625" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..question..." />
-            <marker date="1447153231625" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..answer..." />
-            <marker date="1447153231625" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..answer..." />
+            <marker date="1447643165338" expanded="true" signature="525:600" placeholder="SELECT quest..question..." />
+            <marker date="1447643165338" expanded="true" signature="874:949" placeholder="SELECT quest..question..." />
+            <marker date="1447643165338" expanded="true" signature="1226:1301" placeholder="SELECT quest..question..." />
+            <marker date="1447643165338" expanded="true" signature="1593:1648" placeholder="SELECT * FRO..question..." />
+            <marker date="1447643165338" expanded="true" signature="1950:2003" placeholder="SELECT * FRO..answer..." />
+            <marker date="1447643165338" expanded="true" signature="2427:2492" placeholder="SELECT * FRO..answer..." />
           </folding>
         </state>
       </provider>
@@ -727,13 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.521576">
@@ -751,39 +775,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/freelancer.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42911154">
-          <caret line="84" column="15" selection-start-line="84" selection-start-column="15" selection-end-line="84" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/QuestionModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60150373">
-          <caret line="38" column="28" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="28" />
-          <folding>
-            <marker date="1447153231625" expanded="true" signature="-1:-1" placeholder="SELECT quest..question..." />
-            <marker date="1447153231625" expanded="true" signature="-1:-1" placeholder="SELECT quest..question..." />
-            <marker date="1447153231625" expanded="true" signature="-1:-1" placeholder="SELECT quest..question..." />
-            <marker date="1447153231625" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..question..." />
-            <marker date="1447153231625" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..answer..." />
-            <marker date="1447153231625" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..answer..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/FeedbackView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.9615383">
-          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/QuestionView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.576923">
-          <caret line="73" column="47" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.43010753">
+          <caret line="84" column="18" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -791,26 +784,55 @@
     <entry file="file://$PROJECT_DIR$/assets/js/count_up_timer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/FeedbackDescriptionView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.269231">
-          <caret line="41" column="46" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Question.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42544731">
-          <caret line="126" column="64" selection-start-line="126" selection-start-column="64" selection-end-line="126" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.8076923">
+          <caret line="151" column="44" selection-start-line="151" selection-start-column="44" selection-end-line="151" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/QuestionModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6923075">
+          <caret line="73" column="81" selection-start-line="73" selection-start-column="81" selection-end-line="73" selection-end-column="81" />
           <folding>
-            <element signature="e#7#191#0#PHP" expanded="true" />
+            <marker date="1447643165338" expanded="true" signature="525:600" placeholder="SELECT quest..question..." />
+            <marker date="1447643165338" expanded="true" signature="874:949" placeholder="SELECT quest..question..." />
+            <marker date="1447643165338" expanded="true" signature="1226:1301" placeholder="SELECT quest..question..." />
+            <marker date="1447643165338" expanded="true" signature="1593:1648" placeholder="SELECT * FRO..question..." />
+            <marker date="1447643165338" expanded="true" signature="1950:2003" placeholder="SELECT * FRO..answer..." />
+            <marker date="1447643165338" expanded="true" signature="2427:2492" placeholder="SELECT * FRO..answer..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/FeedbackDescriptionView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="14.153846">
+          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/FeedbackView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.23076923">
+          <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/QuestionView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.8499062">
+          <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
