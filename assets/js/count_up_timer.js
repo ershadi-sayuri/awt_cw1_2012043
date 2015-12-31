@@ -5,12 +5,12 @@ function clock(totalSeconds) {
     setInterval(setTime, 1000);
     function setTime() {
         ++totalSeconds;
-        $('#seconds').html(pad(totalSeconds % 60));
-        $('#minutes').html(pad(parseInt(totalSeconds / 60)));
+        $('#seconds').html(passValue(totalSeconds % 60));
+        $('#minutes').html(passValue(parseInt(totalSeconds / 60)));
     }
 }
 
-function pad(val) {
+function passValue(val) {
     var valString = val + "";
     if (valString.length < 2) {
         return "0" + valString;
@@ -21,8 +21,8 @@ function pad(val) {
 }
 
 function endTime(totalSeconds){
-    $('#seconds_f').html(pad(totalSeconds % 60));
-    $('#minutes_f').html(pad(parseInt(totalSeconds / 60)));
+    $('#seconds_f').html(passValue(totalSeconds % 60));
+    $('#minutes_f').html(passValue(parseInt(totalSeconds / 60)));
     //sessionStorage.timerTime = 0;
 }
 

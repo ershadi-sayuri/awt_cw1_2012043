@@ -70,7 +70,8 @@ class Question extends CI_Controller
 
         $questionData['query'][0]->answers = $answers;
         $questionData['query'][0]->answerProvided = $answerProvided;
-        $this->load->view('QuestionView', $questionData);
+//        $this->load->view('QuestionView', $questionData);
+        $this->load->view('AdminView', $questionData);
     }
 
     /**
