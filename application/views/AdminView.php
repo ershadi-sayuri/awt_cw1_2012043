@@ -38,7 +38,8 @@
                 <a class="list-group-item"><img class="img-responsive" src="../assets/img/profile.png" alt=""></a>
             </ul>
         </div>
-        <div class="col-lg-9">
+
+        <div class="col-lg-9" style="display: none">
             <div class="panel panel-default text-primary">
                 <div class="panel-heading">
                     <h2 class="panel-title">Add new question</h2>
@@ -80,7 +81,9 @@
                             <td>Answer status</td>
                             <td>
                                 <input type="text"/>
-                                <div class="text-warning">* An integer value 0 or 1 indicating 0 for incorrect answer and
+
+                                <div class="text-warning">* An integer value 0 or 1 indicating 0 for incorrect answer
+                                    and
                                     1 for correct answer.
                                 </div>
                             </td>
@@ -91,7 +94,7 @@
                         </tr>
                         <tr>
                             <td>Answer status</td>
-                            <td> <input type="text"/></td>
+                            <td><input type="text"/></td>
                         </tr>
                         <tr>
                             <td>Answer 3</td>
@@ -99,7 +102,124 @@
                         </tr>
                         <tr>
                             <td>Answer status</td>
-                            <td> <input type="text"/></td>
+                            <td><input type="text"/></td>
+                        </tr>
+                    </table>
+                    <div class="text-right">
+                        <button class="btn btn-primary text-left">Sign In</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-9" style="display: none">
+            <div class="panel panel-default text-primary">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Manage questions</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="center-block">
+                        <div class="input-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search question..." size="90"/>
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button">Go</button>
+                                        </span>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table text-left">
+                        <col width="80%">
+                        <col width="20%">
+                        <tr>
+                            <td>Question1</td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default">Edit</button>
+                                    <button type="button" class="btn btn-default">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Question2</td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default">Edit</button>
+                                    <button type="button" class="btn btn-default">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-9" style="display: none">
+            <div class="panel panel-default text-primary">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Add new admin</h2>
+                </div>
+                <div class="panel-body">
+                    <table class="table text-left">
+                        <tr>
+                            <td>Admin user name</td>
+                            <td><input type="text"/></td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td>
+                                <input type="password"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Confirm password</td>
+                            <td><input type="password"/></td>
+                        </tr>
+                    </table>
+                    <div class="text-right">
+                        <button class="btn btn-primary text-left">Save admin</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-9">
+            <div class="panel panel-default text-primary">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Manage admins</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="center-block">
+                        <div class="input-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search admin..." size="90"/>
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button">Go</button>
+                                        </span>
+                            </div>
+                            <div class="text-warning">* Enter admin name to search</div>
+                        </div>
+                    </div>
+                    <table class="table text-left">
+                        <col width="80%">
+                        <col width="20%">
+                        <tr>
+                            <td>Admin1</td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default">Edit</button>
+                                    <button type="button" class="btn btn-default">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Admin2</td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default">Edit</button>
+                                    <button type="button" class="btn btn-default">Delete</button>
+                                </div>
+                            </td>
                         </tr>
                     </table>
                 </div>
