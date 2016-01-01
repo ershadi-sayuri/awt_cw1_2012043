@@ -19,8 +19,9 @@ _.extend(Backbone.Validation.callbacks, {
 // Define a model with some validation rules
 var SignUpModel = Backbone.Model.extend({
     defaults: {
-        terms: false,
-        gender: ''
+        username: '',
+        password: '',
+        repeatPassword: ''
     },
     validation: {
         username: {
@@ -56,17 +57,90 @@ var SignUpForm = Backbone.View.extend({
         this.model.set(data);
 
         // Check if the model is valid before saving
-        if(this.model.isValid(true)){
-            // this.model.save();
-            alert('Great Success!');
+        if (this.model.isValid(true)) {
+            var signUpRouter = new SignUpRouter();
+            Backbone.history.start();
+            signUpRouter.navigate("save/user", "user", {
+                params: JSON.stringify(this.model.attributes)
+            });
         }
     },
 
-    remove: function() {
+    remove: function () {
         // Remove the validation binding
         Backbone.Validation.unbind(this);
         return Backbone.View.prototype.remove.apply(this, arguments);
+    },
+
+    render: function () {
+        this.$el.html(this.template(this.model.attributes));
     }
+});
+
+var SignUpRouter = Backbone.Router.extend({
+    routeParams: {},
+    routes: {
+        "save/user": "saveUser",
+    },
+
+    /**
+     * Override navigate function
+     * @param route the route hash
+     * @param key to pass the parameter
+     * @param options the Options for navigate functions
+     */
+    navigate: function (route, key, options) {
+        var routeOption = {
+            trigger: true
+        };
+        var params = (options && options.params) ? options.params : null;
+        $.extend(routeOption, options);
+        delete routeOption.params;
+
+        //set the params for the route
+        this.param(key, params);
+
+        Backbone.Router.prototype.navigate(route, routeOption);
+    },
+
+    /**
+     * Get or set parameters for a route fragment
+     * @param fragment fragment Exact route hash
+     * @param params the parameter you to set for the route
+     * @returns param value for that parameter
+     */
+    param: function (fragment, params) {
+        var matchedRoute;
+        _.any(Backbone.history.handlers, function (handler) {
+            if (handler.route.test(fragment)) {
+                matchedRoute = handler.route;
+            }
+        });
+        if (params !== undefined) {
+            this.routeParams[fragment] = params;
+        }
+
+        return this.routeParams[fragment];
+    },
+
+    saveUser: function () {
+        alert("ssasad" + this.param("user"));
+        var username = JSON.parse(this.param("user")).username;
+        var password = JSON.parse(this.param("user")).password;
+        alert(username + " " + password);
+
+        $.ajax({
+            type: "GET",
+            url: '../User/addNewUser',
+            data: {username: username, password: password},
+            success: function (response) {
+                alert("User saved successfully.");
+            },
+            error: function () {
+                alert("Failed to save the user.");
+            }
+        });
+    },
 });
 
 $(function () {
@@ -76,6 +150,9 @@ $(function () {
     });
 });
 
+/**
+ * converts form elements to a valid JSON object
+ */
 $.fn.serializeObject = function () {
     "use strict";
     var a = {}, b = function (b, c) {

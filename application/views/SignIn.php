@@ -44,7 +44,7 @@
             </div>
             <div class="modal-footer">
                 <div class="form-group">
-                    <button class="btn btn-primary btn-block">Sign In</button>
+                    <button class="btn btn-success btn-block">Sign In</button>
                     <span><a href="#">Need help?</a></span>
                 </div>
             </div>
