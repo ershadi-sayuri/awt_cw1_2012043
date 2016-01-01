@@ -6996,7 +6996,7 @@ button.close {
 
 .modal-body {
     padding: 25px;
-    height: 225px;
+    height: auto;
 }
 
 .modal-footer {
