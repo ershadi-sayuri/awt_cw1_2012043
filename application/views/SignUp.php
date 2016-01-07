@@ -25,7 +25,7 @@
     <script src="../bower_components/backbone/backbone.js"></script>
     <script src="../bower_components/backbone.validation/src/backbone-validation.js"></script>
 
-    <script src="../assets/js/model/signUp.js"></script>
+    <script src="../assets/js/backbone/signUp.js"></script>
 </head>
 <body id="page-top" class="background">
 
@@ -73,6 +73,7 @@
                             <span><a href="#">Need help?</a></span>
                         </div>
                     </div>
+                    <div id="signUpMessage" class="text-left"></div>
                 </div>
             </form>
         </div>
@@ -81,11 +82,10 @@
 
 <!-- Footer -->
 <?php include('Footer.html'); ?>
-
 <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
 <div class="scroll-top page-scroll visible-xs visible-sm">
     <a class="btn btn-primary" href="#page-top">
-        <i class="fa fa-chevron   -up"></i>
+        <i class="fa fa-chevron -up"></i>
     </a>
 </div>
 

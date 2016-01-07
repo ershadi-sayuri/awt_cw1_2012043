@@ -90,4 +90,14 @@ class QuestionModel extends CI_Model
         }
     }
 
+    /**
+     * get all questions from the database
+     * @return mixed
+     */
+    function getAllQuestions()
+    {
+        $this->load->database();
+        $query = $this->db->query("SELECT * FROM question");
+        return $query->result();
+    }
 }

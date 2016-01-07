@@ -25,4 +25,9 @@ class Main extends CI_Controller
     {
         $this->load->view('SignIn');
     }
+
+    function loadAdminPage()
+    {
+        $this->load->view('AdminView');
+    }
 }

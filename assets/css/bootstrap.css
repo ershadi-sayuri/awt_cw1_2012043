@@ -159,6 +159,7 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+li[disabled],
 button[disabled],
 html input[disabled] {
     cursor: default;

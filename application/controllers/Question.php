@@ -70,8 +70,7 @@ class Question extends CI_Controller
 
         $questionData['query'][0]->answers = $answers;
         $questionData['query'][0]->answerProvided = $answerProvided;
-//        $this->load->view('QuestionView', $questionData);
-        $this->load->view('AdminView', $questionData);
+        $this->load->view('QuestionView', $questionData);
     }
 
     /**
@@ -177,4 +176,13 @@ class Question extends CI_Controller
         $this->load->view('FeedbackDescriptionView', $feedbackSummary);
     }
 
+    /**
+     * function to load all the questions
+     * @return mixed
+     */
+    function loadAllQuestions(){
+        $this->load->model('QuestionModel');
+        $questions['query'] = $this->QuestionModel->getAllQuestions();
+        echo json_encode($questions['query']);
+    }
 }

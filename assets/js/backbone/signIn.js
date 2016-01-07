@@ -1,4 +1,4 @@
-// Extend the callbacks to work with Bootstrap, as used in this example
+// Extend the callbacks to work with Bootstrap
 _.extend(Backbone.Validation.callbacks, {
     valid: function (view, attr, selector) {
         var $el = view.$('[name=' + attr + ']'),
@@ -17,32 +17,27 @@ _.extend(Backbone.Validation.callbacks, {
 });
 
 // Define a model with some validation rules
-var SignUpModel = Backbone.Model.extend({
+var SignInModel = Backbone.Model.extend({
     defaults: {
         username: '',
         password: '',
-        repeatPassword: ''
     },
     validation: {
         username: {
             required: true
         },
         password: {
-            minLength: 8
-        },
-        repeatPassword: {
-            equalTo: 'password',
-            msg: 'The passwords does not match'
+            required: true
         }
     }
 });
 
 // Define a View that uses our model
-var SignUpForm = Backbone.View.extend({
+var SignInForm = Backbone.View.extend({
     events: {
-        'click #signUpButton': function (e) {
+        'click #signInButton': function (e) {
             e.preventDefault();
-            this.signUp();
+            this.signIn();
         }
     },
 
@@ -51,16 +46,16 @@ var SignUpForm = Backbone.View.extend({
         Backbone.Validation.bind(this);
     },
 
-    signUp: function () {
+    signIn: function () {
         var data = this.$el.serializeObject();
 
         this.model.set(data);
 
         // Check if the model is valid before saving
         if (this.model.isValid(true)) {
-            var signUpRouter = new SignUpRouter();
+            var signInRouter = new SignInRouter();
             Backbone.history.start();
-            signUpRouter.navigate("save/user", "user", {
+            signInRouter.navigate("signin/user", "user", {
                 params: JSON.stringify(this.model.attributes)
             });
         }
@@ -77,10 +72,10 @@ var SignUpForm = Backbone.View.extend({
     }
 });
 
-var SignUpRouter = Backbone.Router.extend({
+var SignInRouter = Backbone.Router.extend({
     routeParams: {},
     routes: {
-        "save/user": "saveUser",
+        "signin/user": "signInUser",
     },
 
     /**
@@ -123,18 +118,16 @@ var SignUpRouter = Backbone.Router.extend({
         return this.routeParams[fragment];
     },
 
-    saveUser: function () {
-        alert("ssasad" + this.param("user"));
+    signInUser: function () {
         var username = JSON.parse(this.param("user")).username;
         var password = JSON.parse(this.param("user")).password;
-        alert(username + " " + password);
 
         $.ajax({
             type: "GET",
-            url: '../User/addNewUser',
+            url: '../user/signinuser',
             data: {username: username, password: password},
             success: function (response) {
-                alert("User saved successfully.");
+                alert("User logged in successfully.");
             },
             error: function () {
                 alert("Failed to save the user.");
@@ -144,9 +137,9 @@ var SignUpRouter = Backbone.Router.extend({
 });
 
 $(function () {
-    var view = new SignUpForm({
+    var view = new SignInForm({
         el: 'form',
-        model: new SignUpModel()
+        model: new SignInModel()
     });
 });
 

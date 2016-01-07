@@ -21,10 +21,28 @@ class UserModel extends CI_Model
         return $query->result();
     }
 
-    function addNewUser($userId, $username, $encryptedPassword)
+    /**
+     * add new user with student role id as r002
+     * @param $userId
+     * @param $username
+     * @param $encryptedPassword
+     * @return mixed
+     */
+    function addNewUser($userId, $username, $encryptedPassword, $roleId)
     {
         $this->load->database();
-        $query = $this->db->query("INSERT INTO user VALUES ('$userId', '$username', '$encryptedPassword', 'r002')");
+        $result = $this->db->query("INSERT INTO user VALUES ('$userId', '$username', '$encryptedPassword', '$roleId')");
+        return $result;
+    }
+
+    /**
+     * find whether there is a user from the given username in the database
+     * @param $username
+     * @return mixed
+     */
+    function validateUser($username){
+        $this->load->database();
+        $query = $this->db->query("SELECT * from user WHERE user_name='$username'");
         return $query->result();
     }
 }
