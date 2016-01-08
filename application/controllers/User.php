@@ -65,6 +65,7 @@ class User extends CI_Controller
     {
         $enteredUsername = $_GET["username"];
         $enteredPassword = $_GET["password"];
+        $enteredRoleId = $_GET["roleId"];
 
         $this->load->model('UserModel');
         $result = $this->UserModel->validateUser($enteredUsername);

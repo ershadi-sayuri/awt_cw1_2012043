@@ -24,6 +24,7 @@
     <script src="../bower_components/underscore/underscore.js"></script>
     <script src="../bower_components/backbone/backbone.js"></script>
     <script src="../bower_components/backbone.validation/src/backbone-validation.js"></script>
+    <script src="../assets/js/backbone/common.js"></script>
 
     <script src="../assets/js/backbone/signUp.js"></script>
 </head>

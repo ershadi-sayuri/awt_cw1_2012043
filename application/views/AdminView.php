@@ -12,6 +12,7 @@
 
     <!-- Custom CSS -->
     <link href="../assets/css/freelancer.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -34,8 +35,8 @@
                     <a id="manageQuestions" class="list-group-item">Manage questions</a>
                     <a id="addNewAdmin" class="list-group-item">Add new admin</a>
                     <a id="manageUsers" class="list-group-item">Manage users</a>
+                    <a class="list-group-item"><img class="img-responsive" src="../assets/img/profile.png" alt=""></a>
                 </form>
-                <a class="list-group-item"><img class="img-responsive" src="../assets/img/profile.png" alt=""></a>
             </ul>
         </div>
 
@@ -226,6 +227,9 @@
                         </div>
                     </div>
                     <div class="form-group">
+                            <input type="hidden" id="roleId" name="roleId" value="r001"/>
+                    </div>
+                    <div class="form-group">
                         <div class="col-md-12 text-right">
                             <button id="saveAdminButton" class="btn btn-success">Save admin</button>
                         </div>
@@ -284,11 +288,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone.js"></script>
 <script src="../bower_components/backbone.validation/src/backbone-validation.js"></script>
 
+<script src="../assets/js/backbone/common.js"></script>
+
 <script src="../assets/js/backbone/manageQuestions.js"></script>
 <script src="../assets/js/backbone/manageUsers.js"></script>
-
 <script src="../assets/js/backbone/manageAdminView.js"></script>
 
-<script src="../assets/js/backbone/router.js"></script>
+<script src="../assets/js/backbone/routers/adminConsoleRouter.js"></script>
+<script src="../assets/js/backbone/routers/saveUserRouter.js"></script>
 </body>
 </html>

@@ -51,30 +51,39 @@ var AdminConsoleRouter = Backbone.Router.extend({
     },
 
     managequestions: function () {
+        var questionListView = new QuestionListView();
+
         $("#content_right").innerHTML = "";
         $("#content_right").html(questionListView.render().el);
     },
 
     manageusers: function () {
+        var userListView = new UserListView();
+
         $("#content_right").innerHTML = "";
         $("#content_right").html(userListView.render().el);
     },
 
     addadmin: function () {
+        var addAdminView = new AddAdminView({
+            el: 'form',
+            model: new AdminModel()
+        });
+
         $("#content_right").innerHTML = "";
-        $("#content_right").html(adminView.render().el);
+        $("#content_right").html(addAdminView.render().el);
     },
 
     addquestion: function () {
+        var questionView = new AddQuestionView({
+            el: 'form',
+            model: new QuestionModel()
+        });
+
         $("#content_right").innerHTML = "";
         $("#content_right").html(questionView.render().el);
     }
 });
-
-var questionListView = new QuestionListView();
-var userListView = new UserListView();
-var adminView = new AddAdminView();
-var questionView = new AddQuestionView();
 
 var adminConsoleRouter = new AdminConsoleRouter();
 
