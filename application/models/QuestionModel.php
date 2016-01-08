@@ -100,4 +100,16 @@ class QuestionModel extends CI_Model
         $query = $this->db->query("SELECT * FROM question");
         return $query->result();
     }
+
+    /**
+     * gets the last question id from the database
+     * this is used to generate the next question id
+     * @return mixed
+     */
+    function getLastQuestionId()
+    {
+        $this->load->database();
+        $query = $this->db->query("SELECT question_id FROM question ORDER BY question_id DESC LIMIT 1");
+        return $query->result();
+    }
 }

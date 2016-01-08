@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99eef3f2-3181-4c93-92a9-393ea2e17b71" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/backbone/common.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/backbone/routers/saveQuestionRouter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/backbone/routers/saveUserRouter.js" />
-      <change type="MOVED" beforePath="C:\wamp\www\awt_cw1_2012043\assets\js\backbone\router.js" afterPath="$PROJECT_DIR$/assets/js/backbone/routers/adminConsoleRouter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/AdminView.php" afterPath="$PROJECT_DIR$/application/views/AdminView.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/SignIn.php" afterPath="$PROJECT_DIR$/application/views/SignIn.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/SignUp.php" afterPath="$PROJECT_DIR$/application/views/SignUp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/User.php" afterPath="$PROJECT_DIR$/application/controllers/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/backbone/manageQuestions.js" afterPath="$PROJECT_DIR$/assets/js/backbone/manageQuestions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/backbone/manageUsers.js" afterPath="$PROJECT_DIR$/assets/js/backbone/manageUsers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/backbone/signIn.js" afterPath="$PROJECT_DIR$/assets/js/backbone/signIn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/backbone/signUp.js" afterPath="$PROJECT_DIR$/assets/js/backbone/signUp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/Answer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/AnswerModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Question.php" afterPath="$PROJECT_DIR$/application/controllers/Question.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/QuestionModel.php" afterPath="$PROJECT_DIR$/application/models/QuestionModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/backbone/routers/adminConsoleRouter.js" afterPath="$PROJECT_DIR$/assets/js/backbone/routers/adminConsoleRouter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/backbone/manageAdminView.js" afterPath="$PROJECT_DIR$/assets/js/backbone/manageAdminView.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/backbone/routers/saveQuestionRouter.js" afterPath="$PROJECT_DIR$/assets/js/backbone/routers/saveQuestionRouter.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="awt_cw1_2012043.iws" />
@@ -40,8 +34,8 @@
       <file leaf-file-name="AdminView.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/AdminView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="9.0">
-              <caret line="106" column="85" selection-start-line="106" selection-start-column="72" selection-end-line="106" selection-end-column="85" />
+            <state vertical-scroll-proportion="-4.909091">
+              <caret line="142" column="85" selection-start-line="142" selection-start-column="72" selection-end-line="142" selection-end-column="85" />
               <folding>
                 <element signature="n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -53,11 +47,36 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="UserModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/UserModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.115385">
+              <caret line="35" column="5" selection-start-line="23" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
+              <folding>
+                <marker date="1452177776543" expanded="true" signature="375:429" placeholder="SELECT user_..user..." />
+                <marker date="1452177776543" expanded="true" signature="757:838" placeholder="INSERT INTO ..." />
+                <marker date="1452177776543" expanded="true" signature="1121:1167" placeholder="SELECT * fro..user..." />
+                <marker date="1452177776543" expanded="true" signature="1388:1406" placeholder="SELECT * FRO..user..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.730769">
+              <caret line="52" column="28" selection-start-line="10" selection-start-column="4" selection-end-line="58" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="manageUsers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/backbone/manageUsers.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="108" column="6" selection-start-line="104" selection-start-column="4" selection-end-line="108" selection-end-column="6" />
+              <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
               <folding>
                 <element signature="e#0#49#0" expanded="false" />
               </folding>
@@ -75,39 +94,82 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="saveQuestionRouter.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="saveQuestionRouter.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/backbone/routers/saveQuestionRouter.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manageAdminView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/backbone/manageAdminView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="3" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
+              <caret line="58" column="25" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="25" />
               <folding>
                 <element signature="e#0#49#0" expanded="false" />
+                <element signature="e#188#365#0" expanded="false" />
+                <element signature="e#411#770#0" expanded="false" />
+                <element signature="e#777#994#0" expanded="false" />
+                <element signature="e#1034#1388#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminConsoleRouter.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/backbone/routers/adminConsoleRouter.js">
+      <file leaf-file-name="Question.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Question.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="12" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
+            <state vertical-scroll-proportion="-3.4">
+              <caret line="226" column="46" selection-start-line="226" selection-start-column="46" selection-end-line="226" selection-end-column="46" />
               <folding>
-                <element signature="e#0#49#0" expanded="false" />
-                <element signature="e#304#481#0" expanded="false" />
-                <element signature="e#527#886#0" expanded="false" />
-                <element signature="e#893#1110#0" expanded="false" />
-                <element signature="e#1150#1504#0" expanded="false" />
+                <element signature="e#294#446#0#PHP" expanded="false" />
+                <element signature="n#loadTenQuestionIds#0;n#Question#0;n#!!top" expanded="false" />
+                <element signature="e#1564#1737#0#PHP" expanded="false" />
+                <element signature="n#loadQuestion#0;n#Question#0;n#!!top" expanded="false" />
+                <element signature="e#2695#2768#0#PHP" expanded="false" />
+                <element signature="n#checkAnswers#0;n#Question#0;n#!!top" expanded="false" />
+                <element signature="e#4360#4440#0#PHP" expanded="false" />
+                <element signature="n#generateFeedback#0;n#Question#0;n#!!top" expanded="false" />
+                <element signature="e#5386#5438#0#PHP" expanded="false" />
+                <element signature="n#viewAnswerDescription#0;n#Question#0;n#!!top" expanded="false" />
+                <element signature="e#6914#6988#0#PHP" expanded="false" />
+                <element signature="n#loadAllQuestions#0;n#Question#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnswerModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/AnswerModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.807693">
+              <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+              <folding>
+                <marker date="1452281084818" expanded="true" signature="385:445" placeholder="SELECT answe..answer..." />
+                <marker date="1452281084818" expanded="true" signature="807:894" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Answer.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Answer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.4926829">
+              <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuestionModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/QuestionModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.384615">
+              <caret line="108" column="32" selection-start-line="108" selection-start-column="32" selection-end-line="108" selection-end-column="32" />
+              <folding>
+                <marker date="1452280943050" expanded="true" signature="525:600" placeholder="SELECT quest..question..." />
+                <marker date="1452280943050" expanded="true" signature="874:949" placeholder="SELECT quest..question..." />
+                <marker date="1452280943050" expanded="true" signature="1226:1301" placeholder="SELECT quest..question..." />
+                <marker date="1452280943050" expanded="true" signature="1593:1648" placeholder="SELECT * FRO..question..." />
+                <marker date="1452280943050" expanded="true" signature="1950:2003" placeholder="SELECT * FRO..answer..." />
+                <marker date="1452280943050" expanded="true" signature="2427:2492" placeholder="SELECT * FRO..answer..." />
+                <marker date="1452280943050" expanded="true" signature="2955:2977" placeholder="SELECT * FRO..question..." />
+                <marker date="1452280943050" expanded="true" signature="3269:3335" placeholder="SELECT quest..question..." />
               </folding>
             </state>
           </provider>
@@ -153,8 +215,6 @@
         <option value="$PROJECT_DIR$/assets/js/model/signIn.js" />
         <option value="$PROJECT_DIR$/assets/js/model/signUp.js" />
         <option value="$PROJECT_DIR$/application/controllers/Main.php" />
-        <option value="$PROJECT_DIR$/application/models/QuestionModel.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Question.php" />
         <option value="$PROJECT_DIR$/assets/js/backbone/adminConsole.js" />
         <option value="$PROJECT_DIR$/assets/js/backbone/manageAdmins.js" />
         <option value="$PROJECT_DIR$/assets/js/backbone/router" />
@@ -166,16 +226,20 @@
         <option value="$PROJECT_DIR$/application/views/SignIn.php" />
         <option value="$PROJECT_DIR$/assets/js/backbone/signUp.js" />
         <option value="$PROJECT_DIR$/assets/js/backbone/signIn.js" />
-        <option value="$PROJECT_DIR$/assets/js/backbone/manageAdminView.js" />
         <option value="$PROJECT_DIR$/assets/js/backbone/router.js" />
         <option value="$PROJECT_DIR$/application/controllers/User.php" />
         <option value="$PROJECT_DIR$/assets/js/backbone/saveUserRouter.js" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/assets/js/backbone/manageUsers.js" />
-        <option value="$PROJECT_DIR$/assets/js/backbone/routers/adminConsoleRouter.js" />
         <option value="$PROJECT_DIR$/application/views/AdminView.php" />
         <option value="$PROJECT_DIR$/assets/js/backbone/manageQuestions.js" />
+        <option value="$PROJECT_DIR$/assets/js/backbone/routers/adminConsoleRouter.js" />
+        <option value="$PROJECT_DIR$/assets/js/backbone/manageAdminView.js" />
         <option value="$PROJECT_DIR$/assets/js/backbone/routers/saveQuestionRouter.js" />
+        <option value="$PROJECT_DIR$/application/controllers/Question.php" />
+        <option value="$PROJECT_DIR$/application/models/QuestionModel.php" />
+        <option value="$PROJECT_DIR$/application/models/AnswerModel.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Answer.php" />
       </list>
     </option>
   </component>
@@ -732,12 +796,12 @@
       <workItem from="1452140058095" duration="17858000" />
       <workItem from="1452174465274" duration="16820000" />
       <workItem from="1452228739481" duration="1892000" />
-      <workItem from="1452231103944" duration="30187000" />
+      <workItem from="1452231103944" duration="32985000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="283791000" />
+    <option name="totallyTimeSpent" value="286589000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -746,7 +810,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13385826" sideWeight="0.511713" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13385826" sideWeight="0.511713" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -755,7 +819,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2510981" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13385826" sideWeight="0.48828697" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22362205" sideWeight="0.48828697" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -768,6 +832,32 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13385826" sideWeight="0.511713" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2510981" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13385826" sideWeight="0.48828697" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -791,20 +881,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/FeedbackView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="7" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/QuestionModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="43" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/QuestionView.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1008,20 +1084,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Question.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6888112">
-          <caret line="182" column="29" selection-start-line="182" selection-start-column="13" selection-end-line="182" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/QuestionModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33216783">
-          <caret line="85" column="66" selection-start-line="85" selection-start-column="66" selection-end-line="85" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Main.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17575757">
@@ -1035,19 +1097,6 @@
         <state vertical-scroll-proportion="0.49067163">
           <caret line="6457" column="35" selection-start-line="6457" selection-start-column="35" selection-end-line="6457" selection-end-column="35" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/UserModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23333333">
-          <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
-          <folding>
-            <marker date="1452177776543" expanded="true" signature="-1:-1" placeholder="SELECT user_..user..." />
-            <marker date="1452177776543" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1452177776543" expanded="true" signature="-1:-1" placeholder="SELECT * fro..user..." />
-            <marker date="1452177776543" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1071,14 +1120,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42741936">
           <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25910065">
-          <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -1107,30 +1148,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/backbone/manageAdminView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="3" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#49#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/backbone/routers/adminConsoleRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="12" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#49#0" expanded="false" />
-            <element signature="e#304#481#0" expanded="false" />
-            <element signature="e#527#886#0" expanded="false" />
-            <element signature="e#893#1110#0" expanded="false" />
-            <element signature="e#1150#1504#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/aria.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
@@ -1139,24 +1156,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/AdminView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="9.0">
-          <caret line="106" column="85" selection-start-line="106" selection-start-column="72" selection-end-line="106" selection-end-column="85" />
-          <folding>
-            <element signature="n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#script#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#script#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/backbone/routers/saveUserRouter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.13984674">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="3" selection-start-line="3" selection-start-column="0" selection-end-line="69" selection-end-column="3" />
           <folding>
             <element signature="e#0#49#0" expanded="false" />
             <element signature="e#176#353#0" expanded="false" />
@@ -1167,12 +1170,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/backbone/manageUsers.js">
+    <entry file="file://$PROJECT_DIR$/assets/js/backbone/manageAdminView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="108" column="6" selection-start-line="104" selection-start-column="4" selection-end-line="108" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.74904215">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding>
             <element signature="e#0#49#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/backbone/routers/adminConsoleRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="38" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#49#0" expanded="false" />
+            <element signature="e#336#513#0" expanded="false" />
+            <element signature="e#559#918#0" expanded="false" />
+            <element signature="e#925#1142#0" expanded="false" />
+            <element signature="e#1182#1536#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/AdminView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.909091">
+          <caret line="142" column="85" selection-start-line="142" selection-start-column="72" selection-end-line="142" selection-end-column="85" />
+          <folding>
+            <element signature="n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#3;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1185,10 +1216,104 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/backbone/manageUsers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#49#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/backbone/routers/saveQuestionRouter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="58" column="25" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#49#0" expanded="false" />
+            <element signature="e#188#365#0" expanded="false" />
+            <element signature="e#411#770#0" expanded="false" />
+            <element signature="e#777#994#0" expanded="false" />
+            <element signature="e#1034#1388#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Question.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4">
+          <caret line="226" column="46" selection-start-line="226" selection-start-column="46" selection-end-line="226" selection-end-column="46" />
+          <folding>
+            <element signature="e#294#446#0#PHP" expanded="false" />
+            <element signature="n#loadTenQuestionIds#0;n#Question#0;n#!!top" expanded="false" />
+            <element signature="e#1564#1737#0#PHP" expanded="false" />
+            <element signature="n#loadQuestion#0;n#Question#0;n#!!top" expanded="false" />
+            <element signature="e#2695#2768#0#PHP" expanded="false" />
+            <element signature="n#checkAnswers#0;n#Question#0;n#!!top" expanded="false" />
+            <element signature="e#4360#4440#0#PHP" expanded="false" />
+            <element signature="n#generateFeedback#0;n#Question#0;n#!!top" expanded="false" />
+            <element signature="e#5386#5438#0#PHP" expanded="false" />
+            <element signature="n#viewAnswerDescription#0;n#Question#0;n#!!top" expanded="false" />
+            <element signature="e#6914#6988#0#PHP" expanded="false" />
+            <element signature="n#loadAllQuestions#0;n#Question#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/QuestionModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.384615">
+          <caret line="108" column="32" selection-start-line="108" selection-start-column="32" selection-end-line="108" selection-end-column="32" />
+          <folding>
+            <marker date="1452280943050" expanded="true" signature="525:600" placeholder="SELECT quest..question..." />
+            <marker date="1452280943050" expanded="true" signature="874:949" placeholder="SELECT quest..question..." />
+            <marker date="1452280943050" expanded="true" signature="1226:1301" placeholder="SELECT quest..question..." />
+            <marker date="1452280943050" expanded="true" signature="1593:1648" placeholder="SELECT * FRO..question..." />
+            <marker date="1452280943050" expanded="true" signature="1950:2003" placeholder="SELECT * FRO..answer..." />
+            <marker date="1452280943050" expanded="true" signature="2427:2492" placeholder="SELECT * FRO..answer..." />
+            <marker date="1452280943050" expanded="true" signature="2955:2977" placeholder="SELECT * FRO..question..." />
+            <marker date="1452280943050" expanded="true" signature="3269:3335" placeholder="SELECT quest..question..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/UserModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="35" column="5" selection-start-line="23" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
+          <folding>
+            <marker date="1452177776543" expanded="true" signature="375:429" placeholder="SELECT user_..user..." />
+            <marker date="1452177776543" expanded="true" signature="757:838" placeholder="INSERT INTO ..." />
+            <marker date="1452177776543" expanded="true" signature="1121:1167" placeholder="SELECT * fro..user..." />
+            <marker date="1452177776543" expanded="true" signature="1388:1406" placeholder="SELECT * FRO..user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.730769">
+          <caret line="52" column="28" selection-start-line="10" selection-start-column="4" selection-end-line="58" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/AnswerModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.807693">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <folding>
+            <marker date="1452281084818" expanded="true" signature="385:445" placeholder="SELECT answe..answer..." />
+            <marker date="1452281084818" expanded="true" signature="807:894" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Answer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4926829">
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
           <folding />
         </state>
       </provider>

@@ -4,10 +4,10 @@
 var AdminConsoleRouter = Backbone.Router.extend({
     routeParams: {},
     routes: {
-        'manage/users': 'manageusers',
-        'manage/questions': 'managequestions',
-        'add/admin': 'addadmin',
-        'add/question': 'addquestion'
+        'view/manageusers': 'viewManageUsers',
+        'view/managequestions': 'viewManageQuestions',
+        'view/addadmin': 'viewAddAdmin',
+        'view/addquestion': 'viewAddQuestion'
     },
 
     /**
@@ -50,21 +50,21 @@ var AdminConsoleRouter = Backbone.Router.extend({
         return this.routeParams[fragment];
     },
 
-    managequestions: function () {
+    viewManageQuestions: function () {
         var questionListView = new QuestionListView();
 
         $("#content_right").innerHTML = "";
         $("#content_right").html(questionListView.render().el);
     },
 
-    manageusers: function () {
+    viewManageUsers: function () {
         var userListView = new UserListView();
 
         $("#content_right").innerHTML = "";
         $("#content_right").html(userListView.render().el);
     },
 
-    addadmin: function () {
+    viewAddAdmin: function () {
         var addAdminView = new AddAdminView({
             el: 'form',
             model: new AdminModel()
@@ -74,7 +74,7 @@ var AdminConsoleRouter = Backbone.Router.extend({
         $("#content_right").html(addAdminView.render().el);
     },
 
-    addquestion: function () {
+    viewAddQuestion: function () {
         var questionView = new AddQuestionView({
             el: 'form',
             model: new QuestionModel()

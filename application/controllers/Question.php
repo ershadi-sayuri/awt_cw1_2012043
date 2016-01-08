@@ -185,4 +185,53 @@ class Question extends CI_Controller
         $questions['query'] = $this->QuestionModel->getAllQuestions();
         echo json_encode($questions['query']);
     }
+
+    /**
+     * generate new question id
+     * @return string
+     */
+    function generateQuestionId()
+    {
+        $this->load->model('QuestionModel');
+        // get the last question id from the database
+        $questionIdData = $this->QuestionModel->getLastQuestionId();
+
+        // substring it and removed  the prefix to get the integer value
+        $lastQuestionId = substr($questionIdData[0]->question_id, 1);
+        // add 1 to it
+        $questionId = intval($lastQuestionId) + 1;
+
+        $newQuestionId = "";
+        // added the prefix again, inorder to make $questionId id contains 4 characters
+        if ($questionId < 10) {
+            $newQuestionId = "U00" . $questionId;
+        } else if ($questionId < 100) {
+            $newQuestionId = "U0" . $questionId;
+        } else if ($questionId < 1000) {
+            $newQuestionId = "U" . $questionId;
+        }
+
+        return $newQuestionId;
+    }
+
+    function addNewQuestion(){
+        $questionId = $this->generateQuestionId();
+        $question = $_GET["question"];
+        $difficultyLevel = $_GET["difficultyLevel"];
+        $explanation = $_GET["explanation"];
+        $answer1 = $_GET["answer1"];
+        $answer1Status = $_GET["answer1Status"];
+        $answer2 = $_GET["answer2"];
+        $answer2Status = $_GET["answer2Status"];
+        $answer3 = $_GET["answer3"];
+        $answer3Status = $_GET["explanation"];
+
+        $this->load->model('UserModel');
+        // role r001 id the admin
+        // role r002 is the student
+        // allows signing up only the students from the home page
+        $result = $this->UserModel->addNewUser($userId, $username, $encryptedPassword, $roleId);
+
+        return $result;
+    }
 }

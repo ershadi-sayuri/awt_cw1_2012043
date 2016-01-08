@@ -23,16 +23,16 @@ var AdminView = Backbone.View.extend({
     },
 
     addNewQuestion: function () {
-        adminConsoleRouter.navigate("add/question", "question", {});
+        adminConsoleRouter.navigate("view/addquestion", "question", {});
     },
     manageQuestions: function () {
-        adminConsoleRouter.navigate("manage/questions", "questions", {});
+        adminConsoleRouter.navigate("view/managequestions", "questions", {});
     },
     addNewAdmin: function () {
-        adminConsoleRouter.navigate("add/admin", "user", {});
+        adminConsoleRouter.navigate("view/addadmin", "user", {});
     },
     manageUsers: function () {
-        adminConsoleRouter.navigate("manage/users", "users", {});
+        adminConsoleRouter.navigate("view/manageusers", "users", {});
     }
 });
 
