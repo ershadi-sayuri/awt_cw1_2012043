@@ -22,7 +22,7 @@ class UserModel extends CI_Model
     }
 
     /**
-     * add new user with student role id as r002
+     * add new user
      * @param $userId
      * @param $username
      * @param $encryptedPassword
@@ -40,9 +40,21 @@ class UserModel extends CI_Model
      * @param $username
      * @return mixed
      */
-    function validateUser($username){
+    function validateUser($username)
+    {
         $this->load->database();
         $query = $this->db->query("SELECT * from user WHERE user_name='$username'");
+        return $query->result();
+    }
+
+    /**
+     * get all users from the database
+     * @return mixed
+     */
+    function getAllUsers()
+    {
+        $this->load->database();
+        $query = $this->db->query("SELECT * FROM user");
         return $query->result();
     }
 }

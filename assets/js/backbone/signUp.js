@@ -130,7 +130,7 @@ var SignUpRouter = Backbone.Router.extend({
         $.ajax({
             type: "GET",
             url: '../user/addnewuser',
-            data: {username: username, password: password},
+            data: {username: username, password: password, role_id: "r002"},
             success: function (response) {
                 $("#signUpMessage").html("User added successfully." + response);
                 location.href="Home.php"
@@ -161,3 +161,4 @@ $.fn.serializeObject = function () {
     };
     return $.each(this.serializeArray(), b), a
 };
+

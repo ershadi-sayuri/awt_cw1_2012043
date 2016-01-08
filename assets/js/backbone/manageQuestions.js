@@ -26,18 +26,34 @@ var QuestionListView = Backbone.View.extend({
     }
 });
 
-var AdminConsoleRouter = Backbone.Router.extend({
-    routes: {
-        '': 'managequestions'
-    }
+var AddQuestionView = Backbone.View.extend({
+    events: {
+        'click #saveQuestionButton': function (e) {
+            e.preventDefault();
+            this.saveQuestion();
+        }
+    },
+
+    render: function () {
+        var template = _.template($('#new-question-template').html());
+        var renderedContent = template({});
+        this.$el.html(renderedContent);
+        return this;
+    },
+
+    saveQuestion: function (event) {
+
+    },
 });
 
-var questionListView = new QuestionListView();
-
-var adminConsoleRouter = new AdminConsoleRouter();
-adminConsoleRouter.on('route:managequestions', function () {
-    $("#table").innerHTML = "";
-    $("#table").append(questionListView.render().el);
-});
-
-Backbone.history.start();
+/**
+ * converts form elements to a valid JSON object
+ */
+$.fn.serializeObject = function () {
+    "use strict";
+    var a = {}, b = function (b, c) {
+        var d = a[c.name];
+        "undefined" != typeof d && d !== null ? $.isArray(d) ? d.push(c.value) : a[c.name] = [d, c.value] : a[c.name] = c.value
+    };
+    return $.each(this.serializeArray(), b), a
+};

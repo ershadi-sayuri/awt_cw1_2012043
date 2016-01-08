@@ -45,13 +45,15 @@ class User extends CI_Controller
         $userId = $this->generateUserId();
         $username = $_GET["username"];
         $password = $_GET["password"];
+        $roleId = $_GET["role_id"];
         // password is encrypted before saving in the database
         $encryptedPassword = crypt($password);
 
         $this->load->model('UserModel');
+        // role r001 id the admin
         // role r002 is the student
         // allows signing up only the students from the home page
-        $result = $this->UserModel->addNewUser($userId, $username, $encryptedPassword, "r002");
+        $result = $this->UserModel->addNewUser($userId, $username, $encryptedPassword, $roleId);
 
         return $result;
     }
@@ -90,8 +92,16 @@ class User extends CI_Controller
             }
         } else {
             // there is no such user with the given username
-
         }
+    }
 
+    /**
+     * function to load all the users
+     * @return mixed
+     */
+    function loadAllUsers(){
+        $this->load->model('UserModel');
+        $questions['query'] = $this->UserModel->getAllUsers();
+        echo json_encode($questions['query']);
     }
 }
