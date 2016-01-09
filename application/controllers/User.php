@@ -43,17 +43,19 @@ class User extends CI_Controller
     function addNewUser()
     {
         $userId = $this->generateUserId();
-        $username = $_GET["username"];
-        $password = $_GET["password"];
-        $roleId = $_GET["role_id"];
+        $json_data = json_decode(file_get_contents('php://input'));
+
         // password is encrypted before saving in the database
-        $encryptedPassword = crypt($password);
+        $encryptedPassword = crypt($json_data->{'password'});
+        $data = array(
+            'user_id'=> $userId,
+            'user_name' => $json_data->{'username'},
+            'password' => $encryptedPassword,
+            'role_id' => $json_data->{'roleId'}
+        );
 
         $this->load->model('UserModel');
-        // role r001 id the admin
-        // role r002 is the student
-        // allows signing up only the students from the home page
-        $result = $this->UserModel->addNewUser($userId, $username, $encryptedPassword, $roleId);
+        $result = $this->UserModel->addNewUser($data);
 
         return $result;
     }

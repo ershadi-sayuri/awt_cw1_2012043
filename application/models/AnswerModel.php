@@ -13,7 +13,7 @@ class AnswerModel extends CI_Model
      * this is used to generate the next answer id
      * @return mixed
      */
-    function getLastQuestionId()
+    function getLastAnswerId()
     {
         $this->load->database();
         $query = $this->db->query("SELECT answer_id FROM answer ORDER BY answer_id DESC LIMIT 1");
@@ -22,16 +22,13 @@ class AnswerModel extends CI_Model
 
     /**
      * add new answer
-     * @param $answerId
-     * @param $questionId
-     * @param $status
-     * @param $answerDescription
+     * @param $data
      * @return mixed
      */
-    function addNewAnswer($answerId, $questionId, $status, $answerDescription)
+    function addNewAnswer($data)
     {
         $this->load->database();
-        $result = $this->db->query("INSERT INTO answer VALUES ('$answerId', '$questionId', '$status', '$answerDescription')");
+        $result = $this->db->insert('answer',$data);
         return $result;
     }
 }

@@ -28,6 +28,7 @@ var QuestionListView = Backbone.View.extend({
 
 // Define a model with some validation rules
 var QuestionModel = Backbone.Model.extend({
+    urlRoot : "../Question/addNewQuestion",
     defaults: {
         question: '',
         difficultyLevel: '',
@@ -44,7 +45,8 @@ var QuestionModel = Backbone.Model.extend({
             required: true
         },
         difficultyLevel: {
-            required: true
+            required: true,
+            range: [1, 3]
         },
         explanation: {
             required: true
@@ -54,21 +56,17 @@ var QuestionModel = Backbone.Model.extend({
         },
         answer1Status:{
             required: true,
-            number: true
+            range: [0, 1]
         },
         answer2: {
             required: true
         },
         answer2Status:{
             required: true,
-            number: true
-        },
-        answer3: {
-            required: true
+            range: [0, 1]
         },
         answer3Status:{
-            required: true,
-            number: true
+            range: [0, 1]
         }
     }
 });
@@ -113,17 +111,20 @@ var AddQuestionView = Backbone.View.extend({
         return this.routeParams[fragment];
     },
 
-    saveQuestion: function (event) {
-        var data = this.$el.serializeObject();
+    saveQuestion: function () {
+        var data = $("#addQuestionForm").serializeObject();
 
         this.model.set(data);
 
         // Check if the model is valid before saving
         if (this.model.isValid(true)) {
-            var saveUserRouter = new SaveUserRouter();
-
-            saveUserRouter.navigate("save/user", "user", {
-                params: JSON.stringify(this.model.attributes)
+            this.model.save(data, {
+                success:function(){
+                    console.log("success");
+                },
+                error:function(e){
+                    console.log(e)
+                }
             });
         }
     },

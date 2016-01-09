@@ -27,6 +27,7 @@ var UserListView = Backbone.View.extend({
 
 // Define a model with some validation rules
 var AdminModel = Backbone.Model.extend({
+    urlRoot : "../User/addNewUser",
     defaults: {
         username: '',
         password: '',
@@ -88,16 +89,19 @@ var AddAdminView = Backbone.View.extend({
     },
 
     saveAdmin: function () {
-        var data = this.$el.serializeObject();
+        var data = $("#addAdminForm").serializeObject();
 
         this.model.set(data);
 
         // Check if the model is valid before saving
         if (this.model.isValid(true)) {
-            var saveUserRouter = new SaveUserRouter();
-
-            saveUserRouter.navigate("save/user", "user", {
-                params: JSON.stringify(this.model.attributes)
+            this.model.save(data, {
+                success:function(){
+                    console.log("succses");
+                },
+                error:function(e){
+                    console.log(e)
+                }
             });
         }
     },
@@ -107,5 +111,14 @@ var AddAdminView = Backbone.View.extend({
         Backbone.Validation.unbind(this);
         return Backbone.View.prototype.remove.apply(this, arguments);
     },
+});
+
+//mama haduweeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+var NavigatorView = Backbone.View.extend({
+    temaplate :  _.template($('#navigte-template').html()),
+    render : function(){
+        this.$el.html(this.temaplate);
+        return this;
+    }
 });
 

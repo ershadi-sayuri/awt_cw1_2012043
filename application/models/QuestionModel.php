@@ -112,4 +112,40 @@ class QuestionModel extends CI_Model
         $query = $this->db->query("SELECT question_id FROM question ORDER BY question_id DESC LIMIT 1");
         return $query->result();
     }
+
+    /**
+     * add new question
+     * @param $data
+     * @return mixed
+     */
+    function addNewQuestion($data)
+    {
+        $this->load->database();
+        $result = $this->db->insert('question',$data);
+        return $result;
+    }
+
+    /**
+     * gets the last answer id from the database
+     * this is used to generate the next answer id
+     * @return mixed
+     */
+    function getLastAnswerId()
+    {
+        $this->load->database();
+        $query = $this->db->query("SELECT answer_id FROM answer ORDER BY answer_id DESC LIMIT 1");
+        return $query->result();
+    }
+
+    /**
+     * add new answer
+     * @param $data
+     * @return mixed
+     */
+    function addNewAnswer($data)
+    {
+        $this->load->database();
+        $result = $this->db->insert('answer',$data);
+        return $result;
+    }
 }

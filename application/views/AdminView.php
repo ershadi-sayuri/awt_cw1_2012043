@@ -28,16 +28,8 @@
 <!-- Body -->
 <header id="home">
     <div class="container text-center">
-        <div class="col-lg-3">
-            <ul class="list-group">
-                <form class="form-horizontal text-left" role="form">
-                    <a id="addNewQuestion" class="list-group-item">Add new question</a>
-                    <a id="manageQuestions" class="list-group-item">Manage questions</a>
-                    <a id="addNewAdmin" class="list-group-item">Add new admin</a>
-                    <a id="manageUsers" class="list-group-item">Manage users</a>
-                    <a class="list-group-item"><img class="img-responsive" src="../assets/img/profile.png" alt=""></a>
-                </form>
-            </ul>
+        <div class="col-lg-3" id="navigator">
+
         </div>
 
         <div id="content_right"></div>
@@ -54,13 +46,23 @@
     </a>
 </div>
 
+<script type="text/template" id="navigte-template">
+    <ul class="list-group">
+        <a href="#view/addquestion" id="addNewQuestion" class="list-group-item">Add new question</a>
+        <a href="#view/managequestions" id="manageQuestions" class="list-group-item">Manage questions</a>
+        <a href="#view/addadmin" id="addNewAdmin" class="list-group-item">Add new admin</a>
+        <a href="#view/manageusers" id="manageUsers" class="list-group-item">Manage users</a>
+        <a class="list-group-item"><img class="img-responsive" src="../assets/img/profile.png" alt=""></a>
+    </ul>
+</script>
+
 <script type="text/template" id="new-question-template">
     <div class="col-lg-9">
         <div class="panel panel-default text-primary">
             <div class="panel-heading">
                 <h2 class="panel-title">Add new question</h2>
             </div>
-            <form class="form-horizontal text-left" role="form">
+            <form class="form-horizontal text-left" role="form" id="addQuestionForm">
                 <div class="panel-body text-left">
                     <div class="text-info">Fill in the question details below</div>
                     <div class="form-group">
@@ -200,7 +202,7 @@
             <div class="panel-heading">
                 <h2 class="panel-title">Add new admin</h2>
             </div>
-            <form class="form-horizontal text-left" role="form">
+            <form class="form-horizontal text-left" role="form" id="addAdminForm">
                 <div class="panel-body text-left">
                     <div class="form-group">
                         <label for="username" class="col-lg-4">Admin Username</label>
@@ -227,7 +229,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                            <input type="hidden" id="roleId" name="roleId" value="r001"/>
+                        <input type="hidden" id="roleId" name="roleId" value="r001"/>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12 text-right">
@@ -295,6 +297,5 @@
 <script src="../assets/js/backbone/manageAdminView.js"></script>
 
 <script src="../assets/js/backbone/routers/adminConsoleRouter.js"></script>
-<script src="../assets/js/backbone/routers/saveUserRouter.js"></script>
 </body>
 </html>

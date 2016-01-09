@@ -23,15 +23,13 @@ class UserModel extends CI_Model
 
     /**
      * add new user
-     * @param $userId
-     * @param $username
-     * @param $encryptedPassword
+     * @param $data
      * @return mixed
      */
-    function addNewUser($userId, $username, $encryptedPassword, $roleId)
+    function addNewUser($data)
     {
         $this->load->database();
-        $result = $this->db->query("INSERT INTO user VALUES ('$userId', '$username', '$encryptedPassword', '$roleId')");
+        $result = $this->db->insert('user',$data);
         return $result;
     }
 

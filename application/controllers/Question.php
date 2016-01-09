@@ -180,7 +180,8 @@ class Question extends CI_Controller
      * function to load all the questions
      * @return mixed
      */
-    function loadAllQuestions(){
+    function loadAllQuestions()
+    {
         $this->load->model('QuestionModel');
         $questions['query'] = $this->QuestionModel->getAllQuestions();
         echo json_encode($questions['query']);
@@ -204,34 +205,87 @@ class Question extends CI_Controller
         $newQuestionId = "";
         // added the prefix again, inorder to make $questionId id contains 4 characters
         if ($questionId < 10) {
-            $newQuestionId = "U00" . $questionId;
+            $newQuestionId = "Q00" . $questionId;
         } else if ($questionId < 100) {
-            $newQuestionId = "U0" . $questionId;
+            $newQuestionId = "Q0" . $questionId;
         } else if ($questionId < 1000) {
-            $newQuestionId = "U" . $questionId;
+            $newQuestionId = "Q" . $questionId;
         }
 
         return $newQuestionId;
     }
 
-    function addNewQuestion(){
+    function addNewQuestion()
+    {
         $questionId = $this->generateQuestionId();
-        $question = $_GET["question"];
-        $difficultyLevel = $_GET["difficultyLevel"];
-        $explanation = $_GET["explanation"];
-        $answer1 = $_GET["answer1"];
-        $answer1Status = $_GET["answer1Status"];
-        $answer2 = $_GET["answer2"];
-        $answer2Status = $_GET["answer2Status"];
-        $answer3 = $_GET["answer3"];
-        $answer3Status = $_GET["explanation"];
+        $json_data = json_decode(file_get_contents('php://input'));
 
-        $this->load->model('UserModel');
-        // role r001 id the admin
-        // role r002 is the student
-        // allows signing up only the students from the home page
-        $result = $this->UserModel->addNewUser($userId, $username, $encryptedPassword, $roleId);
+        $questionData = array(
+            'question_id' => $questionId,
+            'question_detail' => $json_data->{'question'},
+            'difficulty' => $json_data->{'difficultyLevel'},
+            'explanation' => $json_data->{'explanation'}
+        );
 
-        return $result;
+        $this->load->model('QuestionModel');
+        $this->QuestionModel->addNewQuestion($questionData);
+
+        $answerId1 = $this->generateAnswerId();
+        $answerData1 = array(
+            'answer_id' => $answerId1,
+            'question_id' => $questionId,
+            'status' => $json_data->{'answer1Status'},
+            'answer_description' => $json_data->{'answer1'}
+        );
+
+        $this->QuestionModel->addNewAnswer($answerData1);
+
+        $answerId2 = $this->generateAnswerId();
+        $answerData2 = array(
+            'answer_id' => $answerId2,
+            'question_id' => $questionId,
+            'status' => $json_data->{'answer2Status'},
+            'answer_description' => $json_data->{'answer2'}
+        );
+
+        $this->QuestionModel->addNewAnswer($answerData2);
+
+        $answerId3 = $this->generateAnswerId();
+        $answerData3 = array(
+            'answer_id' => $answerId3,
+            'question_id' => $questionId,
+            'status' => $json_data->{'answer3Status'},
+            'answer_description' => $json_data->{'answer3'}
+        );
+
+        $this->QuestionModel->addNewAnswer($answerData3);
+    }
+
+    /**
+     * generate new answer id
+     * @return string
+     */
+    function generateAnswerId()
+    {
+        $this->load->model('AnswerModel');
+        // get the last answer id from the database
+        $answerIdData = $this->AnswerModel->getLastAnswerId();
+
+        // substring it and removed  the prefix to get the integer value
+        $lastAnswerId = substr($answerIdData[0]->answer_id, 1);
+        // add 1 to it
+        $answerId = intval($lastAnswerId) + 1;
+
+        $newAnswerId = "";
+        // added the prefix again, inorder to make answer id contains 4 characters
+        if ($answerId < 10) {
+            $newAnswerId = "A00" . $answerId;
+        } else if ($answerId < 100) {
+            $newAnswerId = "A0" . $answerId;
+        } else if ($answerId < 1000) {
+            $newAnswerId = "A" . $answerId;
+        }
+
+        return $newAnswerId;
     }
 }
