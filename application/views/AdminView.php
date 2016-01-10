@@ -184,8 +184,8 @@
                         <td><%= question.get('question_detail') %></td>
                         <td>
                             <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-default">Edit</button>
-                                <button type="button" class="btn btn-default">Delete</button>
+                                <a href="#edit/question/<%= question.get('question_id') %>" class="btn btn-default">Edit</a>
+                                <a href="#delete/question/<%= question.get('question_id') %>" class="btn btn-default">Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -233,7 +233,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-md-12 text-right">
-                            <button id="saveAdminButton" class="btn btn-success">Save admin</button>
+                            <button id="saveUserButton" class="btn btn-success">Save admin</button>
                         </div>
                     </div>
                     <div id="signUpMessage" class="text-left"></div>
@@ -262,15 +262,14 @@
                     </div>
                 </div>
                 <table class="table text-left">
-                    <col width="80%">
-                    <col width="20%">
+                    <col width="90%">
+                    <col width="10%">
                     <% _.each(users1, function(user) { %>
                     <tr>
                         <td><%= user.get('user_name') %></td>
                         <td>
                             <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-default">Edit</button>
-                                <button type="button" class="btn btn-default">Delete</button>
+                                <a href="" class="btn btn-default">Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -295,6 +294,9 @@
 <script src="../assets/js/backbone/manageQuestions.js"></script>
 <script src="../assets/js/backbone/manageUsers.js"></script>
 <script src="../assets/js/backbone/manageAdminView.js"></script>
+
+<script src="../assets/js/backbone/views/signUp.js"></script>
+<script src="../assets/js/backbone/views/navigator.js"></script>
 
 <script src="../assets/js/backbone/routers/adminConsoleRouter.js"></script>
 </body>

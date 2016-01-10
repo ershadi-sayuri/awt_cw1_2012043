@@ -4,7 +4,7 @@
 var AdminConsoleRouter = Backbone.Router.extend({
     routeParams: {},
     routes: {
-        '':'home',
+        '': 'home',
         'view/manageusers': 'viewManageUsers',
         'view/managequestions': 'viewManageQuestions',
         'view/addadmin': 'viewAddAdmin',
@@ -53,31 +53,27 @@ var AdminConsoleRouter = Backbone.Router.extend({
 
     viewManageQuestions: function () {
         var questionListView = new QuestionListView();
-        var navigator =  new NavigatorView();
-        $("#navigator").empty();
-        $("#navigator").html(navigator.render().el);
-
         $("#content_right").innerHTML = "";
         $("#content_right").html(questionListView.render().el);
+
+        var manageQuestionRouter = new ManageQuestionRouter();
     },
 
     viewManageUsers: function () {
         var userListView = new UserListView();
-        var navigator =  new NavigatorView();
-        $("#navigator").empty();
-        $("#navigator").html(navigator.render().el);
-
         $("#content_right").innerHTML = "";
         $("#content_right").html(userListView.render().el);
+
+
     },
 
     viewAddAdmin: function () {
-        var addAdminView = new AddAdminView({
-            model: new AdminModel()
+        var addUserView = new AddUserView({
+            model: new UserModel()
         });
 
         $("#content_right").innerHTML = "";
-        $("#content_right").html(addAdminView.render().el);
+        $("#content_right").html(addUserView.render().el);
     },
 
     viewAddQuestion: function () {
@@ -89,10 +85,12 @@ var AdminConsoleRouter = Backbone.Router.extend({
         $("#content_right").html(addQuestionView.render().el);
     },
 
-    home:function(){
-        var navigator =  new NavigatorView();
+    home: function () {
+        var navigator = new NavigatorView();
         $("#navigator").empty();
         $("#navigator").html(navigator.render().el);
+
+        this.viewAddQuestion();
     }
 });
 

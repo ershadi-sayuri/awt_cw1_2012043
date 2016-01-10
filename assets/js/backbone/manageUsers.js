@@ -26,13 +26,13 @@ var UserListView = Backbone.View.extend({
 });
 
 // Define a model with some validation rules
-var AdminModel = Backbone.Model.extend({
-    urlRoot : "../User/addNewUser",
+var UserModel = Backbone.Model.extend({
+    urlRoot: "../User/addNewUser",
     defaults: {
         username: '',
         password: '',
         repeatPassword: '',
-        roleId: 'r001'
+        roleId: ''
     },
     validation: {
         username: {
@@ -48,16 +48,16 @@ var AdminModel = Backbone.Model.extend({
     }
 });
 
-var AddAdminView = Backbone.View.extend({
+var AddUserView = Backbone.View.extend({
     initialize: function () {
         // This hooks up the validation
         Backbone.Validation.bind(this);
     },
 
     events: {
-        'click #saveAdminButton': function (e) {
+        'click #saveUserButton': function (e) {
             e.preventDefault();
-            this.saveAdmin();
+            this.saveUser();
         }
     },
 
@@ -88,7 +88,7 @@ var AddAdminView = Backbone.View.extend({
         return this.routeParams[fragment];
     },
 
-    saveAdmin: function () {
+    saveUser: function () {
         var data = $("#addAdminForm").serializeObject();
 
         this.model.set(data);
@@ -96,10 +96,10 @@ var AddAdminView = Backbone.View.extend({
         // Check if the model is valid before saving
         if (this.model.isValid(true)) {
             this.model.save(data, {
-                success:function(){
-                    console.log("succses");
+                success: function () {
+                    console.log("success");
                 },
-                error:function(e){
+                error: function (e) {
                     console.log(e)
                 }
             });
@@ -113,12 +113,11 @@ var AddAdminView = Backbone.View.extend({
     },
 });
 
-//mama haduweeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-var NavigatorView = Backbone.View.extend({
-    temaplate :  _.template($('#navigte-template').html()),
-    render : function(){
-        this.$el.html(this.temaplate);
-        return this;
-    }
+$(function () {
+    var view = new SignUpView({
+        el: 'form',
+        model: new UserModel()
+    });
 });
+
 

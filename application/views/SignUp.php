@@ -26,7 +26,8 @@
     <script src="../bower_components/backbone.validation/src/backbone-validation.js"></script>
     <script src="../assets/js/backbone/common.js"></script>
 
-    <script src="../assets/js/backbone/signUp.js"></script>
+    <script src="../assets/js/backbone/views/signUp.js"></script>
+    <script src="../assets/js/backbone/manageUsers.js"></script>
 </head>
 <body id="page-top" class="background">
 
@@ -40,7 +41,7 @@
             <div class="modal-header">
                 <h1 class="text-center">Sign Up</h1>
             </div>
-            <form class="form-horizontal text-left" role="form">
+            <form class="form-horizontal text-left" role="form" id="signUpForm">
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="username" class="col-lg-4">Username</label>
@@ -66,11 +67,14 @@
                             <span class="help-block hidden"></span>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <input type="hidden" id="roleId" name="roleId" value="r002"/>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <div class="form-group">
                         <div class="col-md-12">
-                            <button id="signUpButton" class="btn btn-success btn-block">Sign Up</button>
+                            <button id="saveUserButton" class="btn btn-success btn-block">Sign Up</button>
                             <span><a href="#">Need help?</a></span>
                         </div>
                     </div>
