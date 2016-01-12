@@ -55,4 +55,11 @@ class UserModel extends CI_Model
         $query = $this->db->query("SELECT * FROM user");
         return $query->result();
     }
+
+    function deleteUser($user_id)
+    {
+        $this->db->where('$user_id', $user_id);
+        $result = $this->db->delete('user');
+        return $result;
+    }
 }

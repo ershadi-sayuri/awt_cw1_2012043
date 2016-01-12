@@ -29,8 +29,6 @@
 
     <script src="../assets/js/backbone/models/signIn.js"></script>
     <script src="../assets/js/backbone/views/signInView.js"></script>
-
-    <script src="../assets/js/backbone/signIn.js"></script>
 </head>
 <body id="page-top" class="background">
 

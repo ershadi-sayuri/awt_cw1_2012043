@@ -367,4 +367,14 @@ class Question extends CI_Controller
         echo json_encode(array("question_status" => $update_question_status,
             "answer_status" => array($update_answer_status1, $update_answer_status2, $update_answer_status3)));
     }
+
+    function deleteQuestion(){
+        $question_id = $this->uri->segment(3);
+        $this->load->model('QuestionModel');
+        $delete_answer_status = $this->QuestionModel->deleteAnswer( $question_id);
+        $delete_question_status = $this->QuestionModel->deleteQuestion( $question_id);
+
+        echo json_encode(array("delete_question_status" => $delete_question_status,
+            "delete_answer_status" => $delete_answer_status));
+    }
 }

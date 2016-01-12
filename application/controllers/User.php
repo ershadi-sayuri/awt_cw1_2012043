@@ -114,4 +114,11 @@ class User extends CI_Controller
         $users = $this->UserModel->getAllUsers();
         echo json_encode($users);
     }
+
+    function deleteUser(){
+        $user_id = $this->uri->segment(3);
+        $this->load->model('UserModel');
+        $delete_user_status = $this->UserModel->deleteUser( $user_id);
+        echo json_encode(array("delete_user_status" => $delete_user_status));
+    }
 }

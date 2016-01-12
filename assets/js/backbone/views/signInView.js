@@ -51,3 +51,10 @@ var SignInForm = Backbone.View.extend({
         this.$el.html(this.template(this.model.attributes));
     }
 });
+
+$(function () {
+    var view = new SignInForm({
+        el: 'form',
+        model: new SignInModel()
+    });
+});

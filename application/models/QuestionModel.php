@@ -164,4 +164,18 @@ class QuestionModel extends CI_Model
         $result = $this->db->update('answer', $data);
         return $result;
     }
+
+    function deleteQuestion($question_id)
+    {
+        $this->db->where('question_id', $question_id);
+        $result = $this->db->delete('question');
+        return $result;
+    }
+
+    function deleteAnswer($question_id)
+    {
+        $this->db->where('question_id', $question_id);
+        $result = $this->db->delete('answer');
+        return $result;
+    }
 }

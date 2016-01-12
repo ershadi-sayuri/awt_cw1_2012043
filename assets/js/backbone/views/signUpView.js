@@ -23,11 +23,19 @@ var SignUpView = Backbone.View.extend({
             this.model.save(data, {
                 success: function () {
                     console.log("success");
-                    var userModel = new UserModel();
+                    $("#username").val("");
+                    $("#password").val("");
+                    $("#repeatPassword").val("");
+                    $("#signUpMessage").text("User saved successfully");
+                    $("#signUpMessage").removeClass("text-warning");
                 },
                 error: function (e) {
                     console.log(e)
-                    var userModel = new UserModel();
+                    $("#username").val("");
+                    $("#password").val("");
+                    $("#repeatPassword").val("");
+                    $("#signUpMessage").text("Failed to create the account.");
+                    $("#signUpMessage").addClass("text-warning");
                 },
             });
         }
@@ -58,11 +66,12 @@ var SignUpView = Backbone.View.extend({
         // Remove the validation binding
         Backbone.Validation.unbind(this);
         return Backbone.View.prototype.remove.apply(this, arguments);
-    },
-
-    render: function () {
-        this.$el.html(this.template(this.model.attributes));
     }
 });
 
-
+$(function () {
+    var view = new SignUpView({
+        el: 'form',
+        model: new UserModel()
+    });
+});

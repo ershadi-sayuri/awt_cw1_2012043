@@ -297,9 +297,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone.js"></script>
 <script src="../bower_components/backbone.validation/src/backbone-validation.js"></script>
 
-<script src="../assets/js/backbone/common.js"></script>
-
-<script src="../assets/js/backbone/manageUsers.js"></script>
+<script src="../assets/js/backbone/common.js"></script>>
 
 <script src="../assets/js/backbone/models/question.js"></script>
 <script src="../assets/js/backbone/models/user.js"></script>

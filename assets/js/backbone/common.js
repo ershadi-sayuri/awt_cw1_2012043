@@ -31,16 +31,4 @@ _.extend(Backbone.Validation.callbacks, {
     }
 });
 
-$(function () {
-    var view = new SignInForm({
-        el: 'form',
-        model: new SignInModel()
-    });
-});
 
-$(function () {
-    var view = new SignUpView({
-        el: 'form',
-        model: new UserModel()
-    });
-});
