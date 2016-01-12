@@ -183,8 +183,8 @@ class Question extends CI_Controller
     function loadAllQuestions()
     {
         $this->load->model('QuestionModel');
-        $questions['query'] = $this->QuestionModel->getAllQuestions();
-        echo json_encode($questions['query']);
+        $questions = $this->QuestionModel->getAllQuestions();
+        echo json_encode($questions);
     }
 
     /**
@@ -219,16 +219,15 @@ class Question extends CI_Controller
     {
         $questionId = $this->generateQuestionId();
         $json_data = json_decode(file_get_contents('php://input'));
-
         $questionData = array(
             'question_id' => $questionId,
-            'question_detail' => $json_data->{'question'},
-            'difficulty' => $json_data->{'difficultyLevel'},
+            'question' => $json_data->{'question'},
+            'difficulty' => $json_data->{'difficulty'},
             'explanation' => $json_data->{'explanation'}
         );
-
         $this->load->model('QuestionModel');
-        $this->QuestionModel->addNewQuestion($questionData);
+        $add_question_status = $this->QuestionModel->addNewQuestion($questionData);
+
 
         $answerId1 = $this->generateAnswerId();
         $answerData1 = array(
@@ -238,7 +237,7 @@ class Question extends CI_Controller
             'answer_description' => $json_data->{'answer1'}
         );
 
-        $this->QuestionModel->addNewAnswer($answerData1);
+        $add_answer_status1 = $this->QuestionModel->addNewAnswer($answerData1);
 
         $answerId2 = $this->generateAnswerId();
         $answerData2 = array(
@@ -248,7 +247,7 @@ class Question extends CI_Controller
             'answer_description' => $json_data->{'answer2'}
         );
 
-        $this->QuestionModel->addNewAnswer($answerData2);
+        $add_answer_status2 = $this->QuestionModel->addNewAnswer($answerData2);
 
         $answerId3 = $this->generateAnswerId();
         $answerData3 = array(
@@ -258,7 +257,9 @@ class Question extends CI_Controller
             'answer_description' => $json_data->{'answer3'}
         );
 
-        $this->QuestionModel->addNewAnswer($answerData3);
+        $add_answer_status3 = $this->QuestionModel->addNewAnswer($answerData3);
+        echo json_encode(array("question_status" => $add_question_status,
+            "answer_status" => array($add_answer_status1, $add_answer_status2, $add_answer_status3)));
     }
 
     /**
@@ -267,9 +268,9 @@ class Question extends CI_Controller
      */
     function generateAnswerId()
     {
-        $this->load->model('AnswerModel');
+        $this->load->model('QuestionModel');
         // get the last answer id from the database
-        $answerIdData = $this->AnswerModel->getLastAnswerId();
+        $answerIdData = $this->QuestionModel->getLastAnswerId();
 
         // substring it and removed  the prefix to get the integer value
         $lastAnswerId = substr($answerIdData[0]->answer_id, 1);
@@ -287,5 +288,83 @@ class Question extends CI_Controller
         }
 
         return $newAnswerId;
+    }
+
+    function getQuestionData()
+    {
+        //"get segment 1 , question segment 2 , (:any) segment 3
+        $question_id = $this->uri->segment(3);
+        $this->load->model('QuestionModel');
+        $questionData = $this->QuestionModel->getQuestionData($question_id);
+        $answerData = $this->QuestionModel->getAnswersForAQuestion($question_id);
+
+        $QuestionString1 = substr(json_encode($questionData[0]), 1, -1);
+
+        $QuestionString2 = "\"answer1Id\":\"" . $answerData[0]->answer_id . "\",\"answer1\":\"" .
+            $answerData[0]->answer_description . "\",\"answer1Status\":\"" . $answerData[0]->status .
+            "\",\"answer2Id\":\"" . $answerData[1]->answer_id . "\",\"answer2\":\"" . $answerData[1]->answer_description .
+            "\",\"answer2Status\":\"" . $answerData[1]->status . "\",\"answer3Id\":\"" . $answerData[2]->answer_id .
+            "\",\"answer3\":\"" . $answerData[2]->answer_description . "\",\"answer3Status\":\"" . $answerData[2]->status . "\"";
+
+        $result = "{" . $QuestionString1 . "," . $QuestionString2 . "}";
+        echo $result;
+    }
+
+    function getAnswerData()
+    {
+        //"get segment 1 , question segment 2 , (:any) segment 3
+        $question_id = $this->uri->segment(3);
+        $this->load->model('QuestionModel');
+        $answerData = $this->QuestionModel->getAnswersForAQuestion($question_id);
+    }
+
+    function updateQuestionData()
+    {
+        //"get segment 1 , question segment 2 , (:any) segment 3
+        $question_id = $this->uri->segment(3);
+        $json_data = json_decode(file_get_contents('php://input'));
+
+        $questionData = array(
+            'question_id' => $question_id,
+            'question' => $json_data->{'question'},
+            'difficulty' => $json_data->{'difficulty'},
+            'explanation' => $json_data->{'explanation'}
+        );
+
+        $this->load->model('QuestionModel');
+        $update_question_status = $this->QuestionModel->updateQuestion($questionData, $question_id);
+
+        $answerId1 = $this->generateAnswerId();
+        $answerData1 = array(
+            'answer_id' => $answerId1,
+            'question_id' => $question_id,
+            'status' => $json_data->{'answer1Status'},
+            'answer_description' => $json_data->{'answer1'}
+        );
+
+        $update_answer_status1 = $this->QuestionModel->updateAnswer($answerData1, $answerId1);
+
+        $answerId2 = $this->generateAnswerId();
+        $answerData2 = array(
+            'answer_id' => $answerId2,
+            'question_id' => $question_id,
+            'status' => $json_data->{'answer2Status'},
+            'answer_description' => $json_data->{'answer2'}
+        );
+
+        $update_answer_status2 = $this->QuestionModel->updateAnswer($answerData2, $answerId2);
+
+        $answerId3 = $this->generateAnswerId();
+        $answerData3 = array(
+            'answer_id' => $answerId3,
+            'question_id' => $question_id,
+            'status' => $json_data->{'answer3Status'},
+            'answer_description' => $json_data->{'answer3'}
+        );
+
+        $update_answer_status3 = $this->QuestionModel->updateAnswer($answerData3, $answerId3);
+
+        echo json_encode(array("question_status" => $update_question_status,
+            "answer_status" => array($update_answer_status1, $update_answer_status2, $update_answer_status3)));
     }
 }

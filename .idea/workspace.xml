@@ -2,15 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99eef3f2-3181-4c93-92a9-393ea2e17b71" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/backbone/views/signUp.js" />
-      <change type="DELETED" beforePath="C:\wamp\www\awt_cw1_2012043\application\controllers\Answer.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\awt_cw1_2012043\application\models\AnswerModel.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\awt_cw1_2012043\assets\js\backbone\signUp.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/backbone/views/addQuestionView.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/backbone/views/addUserView.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/backbone/views/manageQuestionsView.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/backbone/views/navigatorView.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/backbone/collections/questionCollection.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/backbone/views/questionListView.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/backbone/models/signIn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/backbone/views/signInView.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/backbone/models/user.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/backbone/collections/userCollection.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/backbone/views/userListView.js" />
+      <change type="DELETED" beforePath="C:\wamp\www\awt_cw1_2012043\assets\js\backbone\manageQuestions.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\awt_cw1_2012043\assets\js\backbone\manageUsers.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\awt_cw1_2012043\assets\js\backbone\signIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\awt_cw1_2012043\assets\js\backbone\views\Navigator.js" afterPath="" />
+      <change type="MOVED" beforePath="C:\wamp\www\awt_cw1_2012043\assets\js\backbone\manageAdminView.js" afterPath="$PROJECT_DIR$/assets/js/backbone/views/adminView.js" />
+      <change type="MOVED" beforePath="C:\wamp\www\awt_cw1_2012043\assets\js\backbone\views\signUp.js" afterPath="$PROJECT_DIR$/assets/js/backbone/views/signUpView.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/AdminView.php" afterPath="$PROJECT_DIR$/application/views/AdminView.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Question.php" afterPath="$PROJECT_DIR$/application/controllers/Question.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/QuestionModel.php" afterPath="$PROJECT_DIR$/application/models/QuestionModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/QuestionView.php" afterPath="$PROJECT_DIR$/application/views/QuestionView.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/SignIn.php" afterPath="$PROJECT_DIR$/application/views/SignIn.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/SignUp.php" afterPath="$PROJECT_DIR$/application/views/SignUp.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/User.php" afterPath="$PROJECT_DIR$/application/controllers/User.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/backbone/routers/adminConsoleRouter.js" afterPath="$PROJECT_DIR$/assets/js/backbone/routers/adminConsoleRouter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/backbone/manageQuestions.js" afterPath="$PROJECT_DIR$/assets/js/backbone/manageQuestions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/backbone/manageUsers.js" afterPath="$PROJECT_DIR$/assets/js/backbone/manageUsers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/backbone/common.js" afterPath="$PROJECT_DIR$/assets/js/backbone/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/routes.php" afterPath="$PROJECT_DIR$/application/config/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="awt_cw1_2012043.iws" />
@@ -33,69 +52,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AdminView.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/AdminView.php">
+      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/backbone/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.076923">
-              <caret line="298" column="50" selection-start-line="298" selection-start-column="50" selection-end-line="298" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manageQuestions.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/backbone/manageQuestions.js">
+      <file leaf-file-name="signInView.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/backbone/views/signInView.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="202" column="33" selection-start-line="202" selection-start-column="33" selection-end-line="202" selection-end-column="33" />
-              <folding>
-                <element signature="e#4170#4347#0" expanded="false" />
-                <element signature="e#4393#4752#0" expanded="false" />
-                <element signature="e#4759#4976#0" expanded="false" />
-                <element signature="e#5016#5370#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="signUp.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/backbone/views/signUp.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manageUsers.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/backbone/manageUsers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="113" column="3" selection-start-line="113" selection-start-column="3" selection-end-line="113" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#49#0" expanded="false" />
-                <element signature="e#89#124#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navigator.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/backbone/views/navigator.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+              <caret line="52" column="3" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
               <folding>
                 <element signature="e#0#50#0" expanded="false" />
               </folding>
@@ -103,29 +74,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminConsoleRouter.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/js/backbone/routers/adminConsoleRouter.js">
+      <file leaf-file-name="SignIn.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/SignIn.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7407407">
-              <caret line="96" column="50" selection-start-line="96" selection-start-column="50" selection-end-line="96" selection-end-column="50" />
-              <folding>
-                <element signature="e#0#49#0" expanded="false" />
-                <element signature="e#356#533#0" expanded="false" />
-                <element signature="e#945#1162#0" expanded="false" />
-                <element signature="e#1202#1556#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manageAdminView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/backbone/manageAdminView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#49#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.5431579">
+              <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -151,17 +105,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/database.sql" />
-        <option value="$PROJECT_DIR$/application/controllers/Feedback.php" />
-        <option value="$PROJECT_DIR$/assets/js/count_up_timer.js" />
-        <option value="$PROJECT_DIR$/.htaccess" />
-        <option value="$PROJECT_DIR$/application/config/config.php" />
-        <option value="D:/startbootstrap-freelancer-1.0.5/index.html" />
-        <option value="$PROJECT_DIR$/application/views/FeedbackDescriptionView.php" />
-        <option value="$PROJECT_DIR$/application/views/FeedbackView.php" />
-        <option value="$PROJECT_DIR$/application/views/Footer.html" />
-        <option value="$PROJECT_DIR$/application/views/Home.php" />
-        <option value="$PROJECT_DIR$/application/views/QuestionView.php" />
         <option value="$PROJECT_DIR$/assets/css/freelancer.css" />
         <option value="$PROJECT_DIR$/assets/js/model/signUpModel.js" />
         <option value="$PROJECT_DIR$/assets/js/underscore.js" />
@@ -175,29 +118,44 @@
         <option value="$PROJECT_DIR$/assets/js/backbone/router" />
         <option value="$PROJECT_DIR$/assets/js/backbone/newAdmin.js" />
         <option value="$PROJECT_DIR$/assets/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/assets/js/backbone/common.js" />
-        <option value="$PROJECT_DIR$/application/views/SignIn.php" />
-        <option value="$PROJECT_DIR$/assets/js/backbone/signIn.js" />
         <option value="$PROJECT_DIR$/assets/js/backbone/router.js" />
         <option value="$PROJECT_DIR$/assets/js/backbone/saveUserRouter.js" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/assets/js/backbone/manageAdminView.js" />
         <option value="$PROJECT_DIR$/assets/js/backbone/routers/saveQuestionRouter.js" />
         <option value="$PROJECT_DIR$/application/models/UserModel.php" />
-        <option value="$PROJECT_DIR$/application/controllers/User.php" />
         <option value="$PROJECT_DIR$/application/models/AnswerModel.php" />
         <option value="$PROJECT_DIR$/application/controllers/Answer.php" />
-        <option value="$PROJECT_DIR$/application/models/QuestionModel.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Question.php" />
         <option value="$PROJECT_DIR$/assets/js/backbone/signUp.js" />
-        <option value="$PROJECT_DIR$/application/views/SignUp.php" />
-        <option value="$PROJECT_DIR$/assets/js/backbone/views/signUp.js" />
-        <option value="$PROJECT_DIR$/assets/js/backbone/manageQuestions.js" />
-        <option value="$PROJECT_DIR$/assets/js/backbone/manageUsers.js" />
         <option value="$PROJECT_DIR$/assets/js/backbone/views/Navigator.js" />
-        <option value="$PROJECT_DIR$/application/views/AdminView.php" />
         <option value="$PROJECT_DIR$/assets/js/backbone/views/navigator.js" />
+        <option value="$PROJECT_DIR$/application/config/routes.php" />
         <option value="$PROJECT_DIR$/assets/js/backbone/routers/adminConsoleRouter.js" />
+        <option value="$PROJECT_DIR$/assets/js/backbone/views/signUp.js" />
+        <option value="$PROJECT_DIR$/application/views/QuestionView.php" />
+        <option value="$PROJECT_DIR$/assets/js/backbone/views/adminView.js" />
+        <option value="$PROJECT_DIR$/assets/js/backbone/views/questionListView.js" />
+        <option value="$PROJECT_DIR$/assets/js/backbone/models/Question.js" />
+        <option value="$PROJECT_DIR$/assets/js/backbone/manageQuestions.js" />
+        <option value="$PROJECT_DIR$/assets/js/backbone/collections/userCollection.js" />
+        <option value="$PROJECT_DIR$/assets/js/backbone/views/userListView.js" />
+        <option value="$PROJECT_DIR$/application/views/SignUp.php" />
+        <option value="$PROJECT_DIR$/assets/js/backbone/collections/questionCollection.js" />
+        <option value="$PROJECT_DIR$/assets/js/backbone/models/question.js" />
+        <option value="$PROJECT_DIR$/assets/js/backbone/models/user.js" />
+        <option value="$PROJECT_DIR$/assets/js/backbone/views/manageQuestionsView.js" />
+        <option value="$PROJECT_DIR$/application/views/AdminView.php" />
+        <option value="$PROJECT_DIR$/application/models/QuestionModel.php" />
+        <option value="$PROJECT_DIR$/assets/js/backbone/views/addQuestionView.js" />
+        <option value="$PROJECT_DIR$/assets/js/backbone/views/addUserView.js" />
+        <option value="$PROJECT_DIR$/application/controllers/Question.php" />
+        <option value="$PROJECT_DIR$/application/controllers/User.php" />
+        <option value="$PROJECT_DIR$/assets/js/backbone/models/signIn.js" />
+        <option value="$PROJECT_DIR$/assets/js/backbone/views/signInView.js" />
+        <option value="$PROJECT_DIR$/application/views/SignIn.php" />
+        <option value="$PROJECT_DIR$/assets/js/backbone/signIn.js" />
+        <option value="$PROJECT_DIR$/assets/js/backbone/manageUsers.js" />
+        <option value="$PROJECT_DIR$/assets/js/backbone/common.js" />
       </list>
     </option>
   </component>
@@ -248,7 +206,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -346,6 +306,84 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backbone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="awt_cw1_2012043" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="awt_cw1_2012043" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backbone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="awt_cw1_2012043" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="awt_cw1_2012043" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backbone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collections" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="awt_cw1_2012043" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="awt_cw1_2012043" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -358,6 +396,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="awt_cw1_2012043" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="awt_cw1_2012043" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -399,8 +455,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -722,12 +776,15 @@
       <workItem from="1452231103944" duration="37474000" />
       <workItem from="1452315538604" duration="19081000" />
       <workItem from="1452352672776" duration="15054000" />
-      <workItem from="1452397620403" duration="2914000" />
+      <workItem from="1452397620403" duration="14948000" />
+      <workItem from="1452482972290" duration="8433000" />
+      <workItem from="1452525867581" duration="6016000" />
+      <workItem from="1452532737529" duration="35280000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="328127000" />
+    <option name="totallyTimeSpent" value="389890000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -745,7 +802,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2510981" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23307087" sideWeight="0.48828697" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13136289" sideWeight="0.48828697" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -772,7 +829,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -781,113 +838,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/js/backbone/manageUsers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="110" column="36" selection-start-line="110" selection-start-column="36" selection-end-line="110" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#49#0" expanded="false" />
-            <element signature="e#89#124#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/backbone/routers/adminConsoleRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#49#0" expanded="false" />
-            <element signature="e#356#533#0" expanded="false" />
-            <element signature="e#945#1162#0" expanded="false" />
-            <element signature="e#1202#1556#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/backbone/routers/adminConsoleRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="82" column="34" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#49#0" expanded="false" />
-            <element signature="e#356#533#0" expanded="false" />
-            <element signature="e#945#1162#0" expanded="false" />
-            <element signature="e#1202#1556#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/FeedbackDescriptionView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="33" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Question.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="52" selection-start-line="64" selection-start-column="52" selection-end-line="64" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/freelancer.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="460" column="8" selection-start-line="460" selection-start-column="1" selection-end-line="460" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1929" column="33" selection-start-line="1929" selection-start-column="27" selection-end-line="1929" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/QuestionModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="55" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/QuestionView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="36" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.545611">
-          <caret line="53" column="36" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/core/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11724138">
@@ -1007,24 +957,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/SignIn.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42741936">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/backbone/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31609195">
-          <caret line="16" column="41" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -1036,27 +972,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54214126">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/QuestionView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.19362187">
-          <caret line="38" column="15" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.78807944">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.16335541">
@@ -1064,121 +979,283 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/UserModel.php">
+    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.769231">
-          <caret line="31" column="50" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Question.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3721973">
-          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/backbone/signIn.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.418018">
+          <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/QuestionModel.php">
+    <entry file="file://$PROJECT_DIR$/user_guide/libraries/file_uploading.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7723404">
-          <caret line="53" column="28" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
+        <state vertical-scroll-proportion="-7.6538463">
+          <caret line="393" column="28" selection-start-line="393" selection-start-column="28" selection-end-line="393" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/backbone/manageQuestions.js">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/common.rnc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="202" column="33" selection-start-line="202" selection-start-column="33" selection-end-line="202" selection-end-column="33" />
-          <folding>
-            <element signature="e#4170#4347#0" expanded="false" />
-            <element signature="e#4393#4752#0" expanded="false" />
-            <element signature="e#4759#4976#0" expanded="false" />
-            <element signature="e#5016#5370#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/SignUp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="80" selection-start-line="49" selection-start-column="72" selection-end-line="49" selection-end-column="80" />
+        <state vertical-scroll-proportion="0.33197555">
+          <caret line="126" column="18" selection-start-line="126" selection-start-column="18" selection-end-line="126" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/backbone/views/signUp.js">
+    <entry file="file://$PROJECT_DIR$/application/views/QuestionView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+        <state vertical-scroll-proportion="-1.8076923">
+          <caret line="47" column="94" selection-start-line="47" selection-start-column="94" selection-end-line="47" selection-end-column="94" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/backbone/manageAdminView.js">
+    <entry file="file://$PROJECT_DIR$/assets/js/backbone/collections/userCollection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#49#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/backbone/manageUsers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="113" column="3" selection-start-line="113" selection-start-column="3" selection-end-line="113" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#49#0" expanded="false" />
-            <element signature="e#89#124#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/AdminView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.076923">
-          <caret line="298" column="50" selection-start-line="298" selection-start-column="50" selection-end-line="298" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/backbone/views/navigator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.1491228">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="e#0#50#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/backbone/routers/adminConsoleRouter.js">
+    <entry file="file://$PROJECT_DIR$/assets/js/backbone/views/adminView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7407407">
-          <caret line="96" column="50" selection-start-line="96" selection-start-column="50" selection-end-line="96" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.7017544">
+          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
           <folding>
             <element signature="e#0#49#0" expanded="false" />
-            <element signature="e#356#533#0" expanded="false" />
-            <element signature="e#945#1162#0" expanded="false" />
-            <element signature="e#1202#1556#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/backbone/views/navigatorView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2236842">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/backbone/views/questionListView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55921054">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#50#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/backbone/views/userListView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37280703">
+          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#50#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/database.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4301676">
+          <caret line="153" column="40" selection-start-line="153" selection-start-column="40" selection-end-line="153" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/AdminView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.269231">
+          <caret line="75" column="26" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45419848">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/backbone/views/addQuestionView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="79" column="17" selection-start-line="74" selection-start-column="16" selection-end-line="79" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#50#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/backbone/models/question.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#50#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Question.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4126985">
+          <caret line="354" column="67" selection-start-line="354" selection-start-column="55" selection-end-line="354" selection-end-column="67" />
+          <folding>
+            <element signature="e#1564#1737#0#PHP" expanded="false" />
+            <element signature="e#2695#2768#0#PHP" expanded="false" />
+            <element signature="n#checkAnswers#0;n#Question#0;n#!!top" expanded="false" />
+            <element signature="e#4360#4440#0#PHP" expanded="false" />
+            <element signature="e#5386#5438#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/backbone/views/manageQuestionsView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/backbone/views/addUserView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8822355">
+          <caret line="58" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#50#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/UserModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53939396">
+          <caret line="40" column="25" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="25" />
+          <folding>
+            <marker date="1452330624551" expanded="true" signature="-1:-1" placeholder="SELECT user_..user..." />
+            <marker date="1452330624551" expanded="true" signature="-1:-1" placeholder="SELECT * fro..user..." />
+            <marker date="1452330624551" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/SignUp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9847328">
+          <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/QuestionModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.4">
+          <caret line="160" column="5" selection-start-line="160" selection-start-column="5" selection-end-line="160" selection-end-column="5" />
+          <folding>
+            <marker date="1452607325507" expanded="true" signature="-1:-1" placeholder="SELECT quest..question..." />
+            <marker date="1452607325507" expanded="true" signature="-1:-1" placeholder="SELECT quest..question..." />
+            <marker date="1452607325507" expanded="true" signature="-1:-1" placeholder="SELECT quest..question..." />
+            <marker date="1452607325507" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..question..." />
+            <marker date="1452607325507" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..answer..." />
+            <marker date="1452607325507" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..answer..." />
+            <marker date="1452607325507" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..question..." />
+            <marker date="1452607325507" expanded="true" signature="-1:-1" placeholder="SELECT quest..question..." />
+            <marker date="1452607325507" expanded="true" signature="-1:-1" placeholder="SELECT answe..answer..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/backbone/views/signUpView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="54" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/backbone/routers/adminConsoleRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7305389">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#49#0" expanded="false" />
+            <element signature="e#401#578#0" expanded="false" />
+            <element signature="e#990#1207#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/backbone/collections/questionCollection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06786427">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#50#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.3978946">
+          <caret line="89" column="72" selection-start-line="89" selection-start-column="62" selection-end-line="89" selection-end-column="72" />
+          <folding>
+            <element signature="n#generateUserId#0;n#User#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/backbone/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1017964">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#50#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/backbone/models/signIn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30538923">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#50#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/backbone/views/signInView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="3" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#50#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/backbone/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/SignIn.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5431579">
+          <caret line="30" column="55" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>

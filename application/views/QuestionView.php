@@ -45,7 +45,7 @@
                     <div class="intro-text">
                         <span class="skills">
                             <!-- question -->
-                            <?php echo($query[0]->question_number . ") " . $query[0]->question_detail) ?></span></br>
+                            <?php echo($query[0]->question_number . ") " . $query[0]->question) ?></span></br>
                         <?php foreach ($query[0]->answers as $answer) { ?>
                                     <!-- answers -->
                                     <input type="radio" name="answer" value="<?php echo $answer[1] ?>"/>

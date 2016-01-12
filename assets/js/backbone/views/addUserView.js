@@ -1,53 +1,6 @@
 /**
- * Created by Ershadi Sayuri on 1/7/2016.
+ * Created by Ershadi Sayuri on 1/12/2016.
  */
-var Users = Backbone.Collection.extend({
-    url: '../user/loadAllUsers'
-});
-
-var UserListView = Backbone.View.extend({
-    render: function () {
-        var that = this;
-        var users = new Users();
-        var template = _.template($('#user-list-template').html());
-
-        users.fetch({
-            success: function (users) {
-                var renderedContent = template({users1: users.models});
-                that.$el.html(renderedContent);
-                console.log(users);
-            },
-            error: function (e) {
-                console.log(e);
-            }
-        })
-        return this;
-    }
-});
-
-// Define a model with some validation rules
-var UserModel = Backbone.Model.extend({
-    urlRoot: "../User/addNewUser",
-    defaults: {
-        username: '',
-        password: '',
-        repeatPassword: '',
-        roleId: ''
-    },
-    validation: {
-        username: {
-            required: true
-        },
-        password: {
-            minLength: 8
-        },
-        repeatPassword: {
-            equalTo: 'password',
-            msg: 'The passwords does not match'
-        }
-    }
-});
-
 var AddUserView = Backbone.View.extend({
     initialize: function () {
         // This hooks up the validation
@@ -96,11 +49,11 @@ var AddUserView = Backbone.View.extend({
         // Check if the model is valid before saving
         if (this.model.isValid(true)) {
             this.model.save(data, {
-                success: function () {
-                    console.log("success");
+                success: function (response) {
+                    console.log("success response " + response);
                 },
-                error: function (e) {
-                    console.log(e)
+                error: function (error) {
+                    console.log("error response " + error);
                 }
             });
         }
@@ -112,12 +65,3 @@ var AddUserView = Backbone.View.extend({
         return Backbone.View.prototype.remove.apply(this, arguments);
     },
 });
-
-$(function () {
-    var view = new SignUpView({
-        el: 'form',
-        model: new UserModel()
-    });
-});
-
-

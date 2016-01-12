@@ -24,7 +24,11 @@
     <script src="../bower_components/underscore/underscore.js"></script>
     <script src="../bower_components/backbone/backbone.js"></script>
     <script src="../bower_components/backbone.validation/src/backbone-validation.js"></script>
+
     <script src="../assets/js/backbone/common.js"></script>
+
+    <script src="../assets/js/backbone/models/signIn.js"></script>
+    <script src="../assets/js/backbone/views/signInView.js"></script>
 
     <script src="../assets/js/backbone/signIn.js"></script>
 </head>
@@ -40,7 +44,7 @@
             <div class="modal-header">
                 <h1 class="text-center">Sign In</h1>
             </div>
-            <form class="form-horizontal text-left" role="form">
+            <form class="form-horizontal text-left" role="form" id="signInForm">
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="username" class="col-lg-4">Username</label>

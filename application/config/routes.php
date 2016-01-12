@@ -40,6 +40,7 @@
 
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
+$route["get/question/(:any)"] = "Question/getQuestionData";
 
 
 /* End of file routes.php */

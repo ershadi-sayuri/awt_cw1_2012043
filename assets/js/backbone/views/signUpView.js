@@ -21,16 +21,14 @@ var SignUpView = Backbone.View.extend({
         // Check if the model is valid before saving
         if (this.model.isValid(true)) {
             this.model.save(data, {
-                success:function(){
+                success: function () {
                     console.log("success");
                     var userModel = new UserModel();
                 },
-                error:function(e){
+                error: function (e) {
                     console.log(e)
                     var userModel = new UserModel();
                 },
-
-
             });
         }
     },

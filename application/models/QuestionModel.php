@@ -121,7 +121,7 @@ class QuestionModel extends CI_Model
     function addNewQuestion($data)
     {
         $this->load->database();
-        $result = $this->db->insert('question',$data);
+        $result = $this->db->insert('question', $data);
         return $result;
     }
 
@@ -145,7 +145,23 @@ class QuestionModel extends CI_Model
     function addNewAnswer($data)
     {
         $this->load->database();
-        $result = $this->db->insert('answer',$data);
+        $result = $this->db->insert('answer', $data);
+        return $result;
+    }
+
+    function updateQuestion($data, $question_id)
+    {
+        $this->load->database();
+        $this->db->where('question_id', $question_id);
+        $result = $this->db->update('question', $data);
+        return $result;
+    }
+
+    function updateAnswer($data, $answer_id)
+    {
+        $this->load->database();
+        $this->db->where('answer_id', $answer_id);
+        $result = $this->db->update('answer', $data);
         return $result;
     }
 }

@@ -30,3 +30,17 @@ _.extend(Backbone.Validation.callbacks, {
         $group.find('.help-block').html(error).removeClass('hidden');
     }
 });
+
+$(function () {
+    var view = new SignInForm({
+        el: 'form',
+        model: new SignInModel()
+    });
+});
+
+$(function () {
+    var view = new SignUpView({
+        el: 'form',
+        model: new UserModel()
+    });
+});

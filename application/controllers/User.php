@@ -48,7 +48,7 @@ class User extends CI_Controller
         // password is encrypted before saving in the database
         $encryptedPassword = crypt($json_data->{'password'});
         $data = array(
-            'user_id'=> $userId,
+            'user_id' => $userId,
             'user_name' => $json_data->{'username'},
             'password' => $encryptedPassword,
             'role_id' => $json_data->{'roleId'}
@@ -57,7 +57,7 @@ class User extends CI_Controller
         $this->load->model('UserModel');
         $result = $this->UserModel->addNewUser($data);
 
-        return $result;
+        echo json_encode(array("user_status" => $result));
     }
 
     /**
@@ -65,36 +65,42 @@ class User extends CI_Controller
      */
     function signInUser()
     {
-        $enteredUsername = $_GET["username"];
-        $enteredPassword = $_GET["password"];
-        $enteredRoleId = $_GET["roleId"];
+        $userId = $this->generateUserId();
+        $json_data = json_decode(file_get_contents('php://input'));
+
+        // password is encrypted before saving in the database
+        $data = array(
+            'user_id' => $userId,
+            'user_name' => $json_data->{'username'},
+            'password' => $json_data->{'password'}
+        );
 
         $this->load->model('UserModel');
-        $result = $this->UserModel->validateUser($enteredUsername);
+        $result = $this->UserModel->validateUser($json_data->{'username'});
 
         if (!empty($result)) {
             // check if the passwords are equal
-            if (crypt($enteredPassword, $result[0]->password) == $result[0]->password) {
+            if (crypt($json_data->{'username'}, $result[0]->password) == $result[0]->password) {
 
                 // check whether the user is an administrator or a student
                 // roo1 id admin
                 // r002 id student
                 if ($result[0]->role_id == "r001") {
-                    echo "admin";
-                    print_r("done");
                     // load admin view
+                    echo json_encode(array("login_status" => "admin user"));
                     $this->load->view('AdminView');
                 } else if ($result[0]->role_id == "r002") {
                     echo "student";
                     // load question view
-                    $this->load->library('../controllers/question');
-                    $this->question->loadTenQuestionIds();
+                    echo json_encode(array("login_status" => "student user"));
                 }
             } else {
                 // incorrect password
+                echo json_encode(array("login_status" => "incorrect password"));
             }
         } else {
             // there is no such user with the given username
+            echo json_encode(array("login_status" => "incorrect username and password"));
         }
     }
 
@@ -102,9 +108,10 @@ class User extends CI_Controller
      * function to load all the users
      * @return mixed
      */
-    function loadAllUsers(){
+    function loadAllUsers()
+    {
         $this->load->model('UserModel');
-        $questions['query'] = $this->UserModel->getAllUsers();
-        echo json_encode($questions['query']);
+        $users = $this->UserModel->getAllUsers();
+        echo json_encode($users);
     }
 }

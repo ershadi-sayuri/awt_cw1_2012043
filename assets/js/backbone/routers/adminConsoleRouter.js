@@ -8,7 +8,8 @@ var AdminConsoleRouter = Backbone.Router.extend({
         'view/manageusers': 'viewManageUsers',
         'view/managequestions': 'viewManageQuestions',
         'view/addadmin': 'viewAddAdmin',
-        'view/addquestion': 'viewAddQuestion'
+        'view/addquestion': 'viewAddQuestion',
+        'edit/question/:id': 'editquestion'
     },
 
     /**
@@ -53,10 +54,10 @@ var AdminConsoleRouter = Backbone.Router.extend({
 
     viewManageQuestions: function () {
         var questionListView = new QuestionListView();
-        $("#content_right").innerHTML = "";
-        $("#content_right").html(questionListView.render().el);
+        $("#content_right").empty();
+        $("#content_right").append(questionListView.render().el);
 
-        var manageQuestionRouter = new ManageQuestionRouter();
+       // var manageQuestionRouter = new ManageQuestionRouter();
     },
 
     viewManageUsers: function () {
@@ -91,9 +92,16 @@ var AdminConsoleRouter = Backbone.Router.extend({
         $("#navigator").html(navigator.render().el);
 
         this.viewAddQuestion();
-    }
+    },
+
 });
 
 var adminConsoleRouter = new AdminConsoleRouter();
+
+adminConsoleRouter.on('route:editquestion', function (id) {
+    var editView = new  AddQuestionView({model: new QuestionModel()});
+    $("#content_right").empty();
+    $("#content_right").html(editView.render(id).el);
+});
 
 Backbone.history.start();
