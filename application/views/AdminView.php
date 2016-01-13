@@ -2,8 +2,6 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
-    <!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
-    <!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
 
     <title>Advance Web Technology CW1 - 2012043</title>
 
@@ -11,6 +9,7 @@
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
+    <!-- reelance theme of boostrap-->
     <link href="../assets/css/freelancer.css" rel="stylesheet">
     <link href="../assets/css/style.css" rel="stylesheet">
 
@@ -28,9 +27,7 @@
 <!-- Body -->
 <header id="home">
     <div class="container text-center">
-        <div class="col-lg-3" id="navigator">
-
-        </div>
+        <div class="col-lg-3" id="navigator"></div>
 
         <div id="content_right"></div>
     </div>
@@ -56,6 +53,7 @@
     </ul>
 </script>
 
+<!--Add new question-->
 <script type="text/template" id="new-question-template">
     <div class="col-lg-9">
         <div class="panel panel-default text-primary">
@@ -101,7 +99,8 @@
                         <label for="answer1" class="col-lg-4">Answer 1</label>
 
                         <div class="col-lg-8">
-                            <input type="text" class="form-control" id="answer1" name="answer1" value="<%= question ? question.get('answer1') : null %>"/>
+                            <input type="text" class="form-control" id="answer1" name="answer1" value="<%= question ?
+                            question.get('answer1') : null %>"/>
                             <span class="help-block hidden"></span>
                         </div>
                     </div>
@@ -109,7 +108,8 @@
                         <label for="answer1Status" class="col-lg-4">Answer status</label>
 
                         <div class="col-lg-8">
-                            <input type="text" class="form-control" id="answer1Status" name="answer1Status" value="<%= question ? question.get('answer1Status') : null %>"/>
+                            <input type="text" class="form-control" id="answer1Status" name="answer1Status"
+                                   value="<%= question ? question.get('answer1Status') : null %>"/>
                             <span class="help-block hidden"></span>
 
                             <div class="text-warning">* An integer value 0 or 1 indicating 0 for incorrect answer
@@ -121,7 +121,8 @@
                         <label for="answer2" class="col-lg-4">Answer 2</label>
 
                         <div class="col-lg-8">
-                            <input type="text" class="form-control" id="answer2" name="answer2" value="<%= question ? question.get('answer2') : null %>"/>
+                            <input type="text" class="form-control" id="answer2" name="answer2"
+                                   value="<%= question ? question.get('answer2') : null %>"/>
                             <span class="help-block hidden"></span>
                         </div>
                     </div>
@@ -129,7 +130,8 @@
                         <label for="answer2Status" class="col-lg-4">Answer status</label>
 
                         <div class="col-lg-8">
-                            <input type="text" class="form-control" id="answer2Status" name="answer2Status" value="<%= question ? question.get('answer2Status') : null %>"/>
+                            <input type="text" class="form-control" id="answer2Status" name="answer2Status"
+                                   value="<%= question ? question.get('answer2Status') : null %>"/>
                             <span class="help-block hidden"></span>
                         </div>
                     </div>
@@ -137,7 +139,8 @@
                         <label for="answer3" class="col-lg-4">Answer 3</label>
 
                         <div class="col-lg-8">
-                            <input type="text" class="form-control" id="answer3" name="answer3" value="<%= question ? question.get('answer3') : null %>"/>
+                            <input type="text" class="form-control" id="answer3" name="answer3" value="<%= question ?
+                            question.get('answer3') : null %>"/>
                             <span class="help-block hidden"></span>
                         </div>
                     </div>
@@ -145,7 +148,8 @@
                         <label for="answer3Status" class="col-lg-4">Answer status</label>
 
                         <div class="col-lg-8">
-                            <input type="text" class="form-control" id="answer3Status" name="answer3Status" value="<%= question ? question.get('answer3Status') : null %>"/>
+                            <input type="text" class="form-control" id="answer3Status" name="answer3Status"
+                                   value="<%= question ? question.get('answer3Status') : null %>"/>
                             <span class="help-block hidden"></span>
                         </div>
                     </div>
@@ -165,6 +169,7 @@
     </div>
 </script>
 
+<!--Delete/Edit questions-->
 <script type="text/template" id="question-list-template">
     <div class="col-lg-9">
         <div class="panel panel-default text-primary">
@@ -195,7 +200,8 @@
                                 <a href="#edit/question/<%= question.get('question_id') %>"
                                    class="btn btn-default">Edit</a>
                                 <button data-questionid="<%= question.get('question_id') %>"
-                                        id="deleteButton" class="btn btn-default" data-index="<%= i %>">Delete</button>
+                                        id="deleteButton" class="btn btn-default" data-index="<%= i %>">Delete
+                                </button>
                             </div>
                         </td>
                     </tr>
@@ -207,6 +213,7 @@
     </div>
 </script>
 
+<!--Add new admin-->
 <script type="text/template" id="new-admin-template">
     <div class="col-lg-9">
         <div class="panel panel-default text-primary">
@@ -254,6 +261,7 @@
     </div>
 </script>
 
+<!--Delete users-->
 <script type="text/template" id="user-list-template">
     <div class="col-lg-9">
         <div class="panel panel-default text-primary">
@@ -296,18 +304,21 @@
 <script src="../assets/js/cbpAnimatedHeader.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone.js"></script>
 <script src="../bower_components/backbone.validation/src/backbone-validation.js"></script>
 
-<script src="../assets/js/backbone/common.js"></script>>
+<script src="../assets/js/backbone/common.js"></script>
 
+<!--models-->
 <script src="../assets/js/backbone/models/question.js"></script>
 <script src="../assets/js/backbone/models/user.js"></script>
 
+<!--collections-->
 <script src="../assets/js/backbone/collections/questionCollection.js"></script>
 <script src="../assets/js/backbone/collections/userCollection.js"></script>
 
+<!--views-->
 <script src="../assets/js/backbone/views/adminView.js"></script>
 <script src="../assets/js/backbone/views/signUpView.js"></script>
 <script src="../assets/js/backbone/views/navigatorView.js"></script>
@@ -317,6 +328,7 @@
 <script src="../assets/js/backbone/views/userListView.js"></script>
 <script src="../assets/js/backbone/views/addUserView.js"></script>
 
+<!--routers-->
 <script src="../assets/js/backbone/routers/adminConsoleRouter.js"></script>
 </body>
 </html>

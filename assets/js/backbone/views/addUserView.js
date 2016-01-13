@@ -41,6 +41,9 @@ var AddUserView = Backbone.View.extend({
         return this.routeParams[fragment];
     },
 
+    /**
+     * save user
+     */
     saveUser: function () {
         var data = $("#addAdminForm").serializeObject();
 

@@ -225,6 +225,9 @@ class Question extends CI_Controller
         return $newQuestionId;
     }
 
+    /**
+     * save new question in the database
+     */
     function saveQuestion()
     {
         $questionId = $this->generateQuestionId();
@@ -236,6 +239,7 @@ class Question extends CI_Controller
             'explanation' => $json_data->{'explanation'}
         );
         $this->load->model('QuestionModel');
+        // saves question
         $add_question_status = $this->QuestionModel->saveQuestion($questionData);
 
 
@@ -247,6 +251,7 @@ class Question extends CI_Controller
             'answer_description' => $json_data->{'answer1'}
         );
 
+        // saves answer
         $add_answer_status1 = $this->QuestionModel->saveAnswer($answerData1);
 
         $answerId2 = $this->generateAnswerId();
@@ -257,6 +262,7 @@ class Question extends CI_Controller
             'answer_description' => $json_data->{'answer2'}
         );
 
+        // saves answer
         $add_answer_status2 = $this->QuestionModel->saveAnswer($answerData2);
 
         $answerId3 = $this->generateAnswerId();
@@ -267,7 +273,10 @@ class Question extends CI_Controller
             'answer_description' => $json_data->{'answer3'}
         );
 
+        // saves answer
         $add_answer_status3 = $this->QuestionModel->saveAnswer($answerData3);
+
+        // responce is made as a json string
         echo json_encode(array("question_status" => $add_question_status,
             "answer_status" => array($add_answer_status1, $add_answer_status2, $add_answer_status3)));
     }
@@ -300,6 +309,9 @@ class Question extends CI_Controller
         return $newAnswerId;
     }
 
+    /**
+     * get question data from the database for a given question id
+     */
     function getQuestionData()
     {
         //"get segment 1 , question segment 2 , (:any) segment 3
@@ -310,16 +322,21 @@ class Question extends CI_Controller
 
         $QuestionString1 = substr(json_encode($questionData[0]), 1, -1);
 
+        // answer data
         $QuestionString2 = "\"answer1Id\":\"" . $answerData[0]->answer_id . "\",\"answer1\":\"" .
             $answerData[0]->answer_description . "\",\"answer1Status\":\"" . $answerData[0]->status .
-            "\",\"answer2Id\":\"" . $answerData[1]->answer_id . "\",\"answer2\":\"" . $answerData[1]->answer_description .
-            "\",\"answer2Status\":\"" . $answerData[1]->status . "\",\"answer3Id\":\"" . $answerData[2]->answer_id .
-            "\",\"answer3\":\"" . $answerData[2]->answer_description . "\",\"answer3Status\":\"" . $answerData[2]->status . "\"";
+            "\",\"answer2Id\":\"" . $answerData[1]->answer_id . "\",\"answer2\":\"" . $answerData[1]->answer_description
+            . "\",\"answer2Status\":\"" . $answerData[1]->status . "\",\"answer3Id\":\"" . $answerData[2]->answer_id .
+            "\",\"answer3\":\"" . $answerData[2]->answer_description . "\",\"answer3Status\":\"" .
+            $answerData[2]->status . "\"";
 
         $result = "{" . $QuestionString1 . "," . $QuestionString2 . "}";
         echo $result;
     }
 
+    /**
+     * get answer data from question_id
+     */
     function getAnswerData()
     {
         //"get segment 1 , question segment 2 , (:any) segment 3
@@ -328,6 +345,9 @@ class Question extends CI_Controller
         $answerData = $this->QuestionModel->getAnswersForAQuestion($question_id);
     }
 
+    /**
+     * update question
+     */
     function updateQuestionData()
     {
         //"get segment 1 , question segment 2 , (:any) segment 3
@@ -342,6 +362,7 @@ class Question extends CI_Controller
         );
 
         $this->load->model('QuestionModel');
+        //update question
         $update_question_status = $this->QuestionModel->updateQuestion($questionData, $question_id);
 
         $answerId1 = $this->generateAnswerId();
@@ -352,6 +373,7 @@ class Question extends CI_Controller
             'answer_description' => $json_data->{'answer1'}
         );
 
+        // update answer
         $update_answer_status1 = $this->QuestionModel->updateAnswer($answerData1, $answerId1);
 
         $answerId2 = $this->generateAnswerId();
@@ -378,18 +400,22 @@ class Question extends CI_Controller
             "answer_status" => array($update_answer_status1, $update_answer_status2, $update_answer_status3)));
     }
 
+    /**
+     * delete question from an id
+     */
     function deleteQuestion()
     {
+        //"get segment 1 , question segment 2 , (:any) segment 3
         $question_id = $this->uri->segment(3);
         $this->load->model('QuestionModel');
         $question = new QuestionModel();
-        //$delete_answer_status = $question->deleteAnswer( $question_id);
         $delete_question_status = $question->deleteQuestion($question_id);
         echo json_encode(array("delete_question_status" => $delete_question_status));
     }
 
     /**
-     *
+     * save attempt data of a user
+     * attempt is made when the user views the first question
      */
     function saveAttempt()
     {
@@ -410,6 +436,10 @@ class Question extends CI_Controller
         return json_encode(array("attempt_status" => $saveAttemptStatus));
     }
 
+    /**
+     * generate attempt id
+     * @return string
+     */
     function generateAttemptId()
     {
         $this->load->model('AttemptModel');
@@ -438,6 +468,12 @@ class Question extends CI_Controller
         return $newAttemptId;
     }
 
+    /**
+     * save the question of an attempt with its status 0/1 indication wrong/correct
+     * @param $questionId
+     * @param $status
+     * @return string
+     */
     function saveAttemptQuestion($questionId, $status)
     {
         $this->load->library('session');
@@ -452,11 +488,17 @@ class Question extends CI_Controller
         return json_encode(array("attempt_question_status" => $attemptQuestionData));
     }
 
+    /**
+     * load view to show the user progress
+     */
     function viewProgress()
     {
         $this->load->view('ProgressView');
     }
 
+    /**
+     * load data to progress graph
+     */
     function loadProgress()
     {
         $this->load->library('session');
@@ -474,9 +516,11 @@ class Question extends CI_Controller
             foreach ($attempt_questions as $attempt_question) {
 
                 if ($attempt_question->status == 1) {
+                    // calculate attempt score
                     $attempt_score = $attempt_score + 1;
                 }
             }
+            // generate attempt score
             $attempt_score = $attempt_score *10;
 
             array_push($attempt_scores, array("attempt_id" => $attempt->attempt_id, "attempt_score" => $attempt_score));

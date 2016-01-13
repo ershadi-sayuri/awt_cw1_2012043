@@ -149,6 +149,12 @@ class QuestionModel extends CI_Model
         return $result;
     }
 
+    /**
+     * update question from question id
+     * @param $data
+     * @param $question_id
+     * @return mixed
+     */
     function updateQuestion($data, $question_id)
     {
         $this->load->database();
@@ -157,6 +163,12 @@ class QuestionModel extends CI_Model
         return $result;
     }
 
+    /*
+     * update answer from answer_id
+     * @param $data
+     * @param $answer_id
+     * @return mixed
+     */
     function updateAnswer($data, $answer_id)
     {
         $this->load->database();
@@ -165,6 +177,11 @@ class QuestionModel extends CI_Model
         return $result;
     }
 
+    /**
+     * delete question from finding through question_id
+     * @param $question_id
+     * @return mixed
+     */
     function deleteQuestion($question_id)
     {
         $this->load->database();
@@ -173,6 +190,11 @@ class QuestionModel extends CI_Model
         return $result;
     }
 
+    /**
+     * delete answer from finding through answer_id
+     * @param $question_id
+     * @return mixed
+     */
     function deleteAnswer($question_id)
     {
         $this->load->database();

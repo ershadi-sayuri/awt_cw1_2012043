@@ -14,6 +14,11 @@ var AddQuestionView = Backbone.View.extend({
         }
     },
 
+    /**
+     * add question
+     * @param id
+     * @returns {AddQuestionView}
+     */
     render: function (id) {
         var that = this;
         this.model.urlRoot = "../question/getQuestionData/" + id;
@@ -59,6 +64,9 @@ var AddQuestionView = Backbone.View.extend({
         return this.routeParams[fragment];
     },
 
+    /**
+     * function to save question
+     */
     saveQuestion: function () {
         var data = $("#addQuestionForm").serializeObject();
 
@@ -85,6 +93,10 @@ var AddQuestionView = Backbone.View.extend({
         }
     },
 
+    /**
+     * remove function
+     * @returns {*}
+     */
     remove: function () {
         // Remove the validation binding
         Backbone.Validation.unbind(this);

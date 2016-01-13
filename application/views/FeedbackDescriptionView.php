@@ -50,15 +50,7 @@
 </header>
 
 <!-- Footer -->
-<footer class="text-center navbar-fixed-bottom">
-    <div class="footer-below">
-        <div class="row">
-            <div class="col-lg-11">
-                Copyright &copy; 2012043 Ershadi Sayuri
-            </div>
-        </div>
-    </div>
-</footer>
+<?php include('Footer.html'); ?>
 
 <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
 <div class="scroll-top page-scroll visible-xs visible-sm">

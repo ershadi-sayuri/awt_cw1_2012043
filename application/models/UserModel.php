@@ -56,6 +56,11 @@ class UserModel extends CI_Model
         return $query->result();
     }
 
+    /**
+     * deletes user from the database by finding him through user_id
+     * @param $user_id
+     * @return mixed
+     */
     function deleteUser($user_id)
     {
         $this->db->where('$user_id', $user_id);

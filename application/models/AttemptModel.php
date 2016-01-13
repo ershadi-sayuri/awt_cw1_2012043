@@ -9,6 +9,7 @@
 class AttemptModel extends CI_Model
 {
     /**
+     * get the id of the finally added attempt
      * @return mixed
      */
     function getLastAttemptId()
@@ -18,6 +19,11 @@ class AttemptModel extends CI_Model
         return $query->result();
     }
 
+    /**
+     * save new attempt
+     * @param $data
+     * @return mixed
+     */
     function saveAttempt($data)
     {
         $this->load->database();
@@ -25,6 +31,11 @@ class AttemptModel extends CI_Model
         return $result;
     }
 
+    /**
+     * save attempt_question data
+     * @param $data
+     * @return mixed
+     */
     function saveAttemptQuestion($data)
     {
         $this->load->database();
@@ -32,6 +43,12 @@ class AttemptModel extends CI_Model
         return $result;
     }
 
+    /**
+     * update given attempt from the database
+     * @param $data
+     * @param $attempt_id
+     * @return mixed
+     */
     function updateAttempt($data, $attempt_id)
     {
         $this->load->database();
@@ -40,6 +57,11 @@ class AttemptModel extends CI_Model
         return $result;
     }
 
+    /**
+     * get attempts of a specific user from the database
+     * @param $userId
+     * @return mixed
+     */
     function getUserAttempts($userId)
     {
         $this->load->database();
@@ -47,6 +69,11 @@ class AttemptModel extends CI_Model
         return $query->result();
     }
 
+    /**
+     * get the data from attempt_question from attempt_id
+     * @param $attempt_id
+     * @return mixed
+     */
     function getUserAttemptStatus($attempt_id)
     {
         $this->load->database();

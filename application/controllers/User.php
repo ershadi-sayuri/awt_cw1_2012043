@@ -118,6 +118,9 @@ class User extends CI_Controller
         echo json_encode($users);
     }
 
+    /**
+     * function to delete a user from the user_id
+     */
     function deleteUser()
     {
         $user_id = $this->uri->segment(3);

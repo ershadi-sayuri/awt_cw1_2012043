@@ -13,7 +13,7 @@ class Main extends CI_Controller
     {
         $this->load->view('Home');
         $this->load->library('session');
-        $this->session->unset_userdata();
+        $this->session->unset_userdata("user");
     }
 
     // loads the sign up page of the quiz app
@@ -28,6 +28,7 @@ class Main extends CI_Controller
         $this->load->view('SignIn');
     }
 
+    // loads admin page
     function loadAdminPage()
     {
         $this->load->view('AdminView');

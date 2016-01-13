@@ -9,6 +9,10 @@ var QuestionListView = Backbone.View.extend({
             this.delete(e);
         }
     },
+    /**
+     * get all questions
+     * @returns {QuestionListView}
+     */
     render: function () {
         var that = this;
         var questions = new Questions();
@@ -27,6 +31,10 @@ var QuestionListView = Backbone.View.extend({
         this.questions = questions;
         return this;
     },
+    /**
+     * delete selected question
+     * @param e
+     */
     delete: function (e) {
         var question_id = $(e.currentTarget).data("questionid");
         var index = $(e.currentTarget).data("index");
