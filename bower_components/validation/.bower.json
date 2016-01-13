@@ -1,0 +1,19 @@
+{
+  "name": "validation",
+  "version": "2.2.0",
+  "main": [
+    "validation.js"
+  ],
+  "dependencies": {},
+  "homepage": "https://github.com/One-com/one-validation",
+  "_release": "2.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.2.0",
+    "commit": "f818aee628540487c8aba4b412e3af2071c3936d"
+  },
+  "_source": "git://github.com/One-com/one-validation.git",
+  "_target": "~2.2.0",
+  "_originalSource": "validation",
+  "_direct": true
+}

@@ -26,7 +26,7 @@ var AddQuestionView = Backbone.View.extend({
                     that.$el.html(renderedContent);
                 },
                 error: function (e) {
-                    alert("errorrrrrrrrrrrrrrrr" + e)
+                   console.log(e);
                 }
             });
 
@@ -73,12 +73,15 @@ var AddQuestionView = Backbone.View.extend({
         if (this.model.isValid(true)) {
             this.model.save(data, {
                 success: function (response) {
-                    console.log("success response " + response);
+                    $("#questionSaveMessage").text("Question saved successfully.");
+                    $("#questionSaveMessage").addClass("text-warning");
                 },
                 error: function (error) {
-                    console.log("error response " + error);
+                    $("#questionSaveMessage").text("Failed to save the question.");
+                    $("#questionSaveMessage").addClass("text-warning");
                 }
             });
+            $(".form-control").val("");
         }
     },
 

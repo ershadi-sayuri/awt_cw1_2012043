@@ -23,21 +23,16 @@ var SignUpView = Backbone.View.extend({
             this.model.save(data, {
                 success: function () {
                     console.log("success");
-                    $("#username").val("");
-                    $("#password").val("");
-                    $("#repeatPassword").val("");
                     $("#signUpMessage").text("User saved successfully");
                     $("#signUpMessage").removeClass("text-warning");
                 },
                 error: function (e) {
                     console.log(e)
-                    $("#username").val("");
-                    $("#password").val("");
-                    $("#repeatPassword").val("");
                     $("#signUpMessage").text("Failed to create the account.");
                     $("#signUpMessage").addClass("text-warning");
                 },
             });
+            $(".form-control").val("");
         }
     },
 

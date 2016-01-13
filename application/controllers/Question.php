@@ -257,7 +257,7 @@ class Question extends CI_Controller
             'answer_description' => $json_data->{'answer2'}
         );
 
-        $add_answer_status2 = $this->QuestionModel->asaveAnswer($answerData2);
+        $add_answer_status2 = $this->QuestionModel->saveAnswer($answerData2);
 
         $answerId3 = $this->generateAnswerId();
         $answerData3 = array(

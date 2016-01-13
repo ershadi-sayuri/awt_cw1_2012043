@@ -43,6 +43,7 @@ var QuestionModel = Backbone.Model.extend({
             range: [0, 1]
         },
         answer3Status: {
+            required: true,
             range: [0, 1]
         }
     }

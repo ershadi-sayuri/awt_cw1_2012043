@@ -50,12 +50,15 @@ var AddUserView = Backbone.View.extend({
         if (this.model.isValid(true)) {
             this.model.save(data, {
                 success: function (response) {
-                    console.log("success response " + response);
+                    $("#signUpMessage").text("User saved successfully");
+                    $("#signUpMessage").removeClass("text-warning");
                 },
                 error: function (error) {
-                    console.log("error response " + error);
+                    $("#signUpMessage").text("Failed to create the account.");
+                    $("#signUpMessage").addClass("text-warning");
                 }
             });
+            $(".form-control").val("");
         }
     },
 
