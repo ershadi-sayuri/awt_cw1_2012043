@@ -41,6 +41,9 @@ class Question extends CI_Controller
         $this->session->set_userdata('correctQuestions', array());
         $this->session->set_userdata('wrongQuestions', array());
 
+        // save user attempt
+        $this->saveAttempt();
+
         $this->loadQuestion(0, true);
     }
 
@@ -70,6 +73,7 @@ class Question extends CI_Controller
 
         $questionData['query'][0]->answers = $answers;
         $questionData['query'][0]->answerProvided = $answerProvided;
+
         $this->load->view('QuestionView', $questionData);
     }
 
@@ -91,13 +95,19 @@ class Question extends CI_Controller
                 array_push($correctQuestions, $answerResponse[1]);
                 $correctQuestions = array_unique($correctQuestions);
                 $this->session->set_userdata('correctQuestions', $correctQuestions);
+
+                $this->saveAttemptQuestion($_GET['question_id'], 1);
+
             } else {
                 // if answer is wrong add the question id to wrong question id array
                 $wrongQuestions = $this->session->userdata('wrongQuestions');
                 array_push($wrongQuestions, $answerResponse[1]);
                 $wrongQuestions = array_unique($wrongQuestions);
                 $this->session->set_userdata('wrongQuestions', $wrongQuestions);
+
+                $this->saveAttemptQuestion($_GET['question_id'], 0);
             }
+
             if ($answerResponse[0] < 10) {
                 // load next question
                 $this->loadQuestion($answerResponse[0], true);
@@ -215,7 +225,7 @@ class Question extends CI_Controller
         return $newQuestionId;
     }
 
-    function addNewQuestion()
+    function saveQuestion()
     {
         $questionId = $this->generateQuestionId();
         $json_data = json_decode(file_get_contents('php://input'));
@@ -226,7 +236,7 @@ class Question extends CI_Controller
             'explanation' => $json_data->{'explanation'}
         );
         $this->load->model('QuestionModel');
-        $add_question_status = $this->QuestionModel->addNewQuestion($questionData);
+        $add_question_status = $this->QuestionModel->saveQuestion($questionData);
 
 
         $answerId1 = $this->generateAnswerId();
@@ -237,7 +247,7 @@ class Question extends CI_Controller
             'answer_description' => $json_data->{'answer1'}
         );
 
-        $add_answer_status1 = $this->QuestionModel->addNewAnswer($answerData1);
+        $add_answer_status1 = $this->QuestionModel->saveAnswer($answerData1);
 
         $answerId2 = $this->generateAnswerId();
         $answerData2 = array(
@@ -247,7 +257,7 @@ class Question extends CI_Controller
             'answer_description' => $json_data->{'answer2'}
         );
 
-        $add_answer_status2 = $this->QuestionModel->addNewAnswer($answerData2);
+        $add_answer_status2 = $this->QuestionModel->asaveAnswer($answerData2);
 
         $answerId3 = $this->generateAnswerId();
         $answerData3 = array(
@@ -257,7 +267,7 @@ class Question extends CI_Controller
             'answer_description' => $json_data->{'answer3'}
         );
 
-        $add_answer_status3 = $this->QuestionModel->addNewAnswer($answerData3);
+        $add_answer_status3 = $this->QuestionModel->saveAnswer($answerData3);
         echo json_encode(array("question_status" => $add_question_status,
             "answer_status" => array($add_answer_status1, $add_answer_status2, $add_answer_status3)));
     }
@@ -368,12 +378,110 @@ class Question extends CI_Controller
             "answer_status" => array($update_answer_status1, $update_answer_status2, $update_answer_status3)));
     }
 
-    function deleteQuestion(){
+    function deleteQuestion()
+    {
         $question_id = $this->uri->segment(3);
         $this->load->model('QuestionModel');
         $question = new QuestionModel();
         //$delete_answer_status = $question->deleteAnswer( $question_id);
-        $delete_question_status = $question->deleteQuestion( $question_id);
+        $delete_question_status = $question->deleteQuestion($question_id);
         echo json_encode(array("delete_question_status" => $delete_question_status));
     }
+
+    /**
+     *
+     */
+    function saveAttempt()
+    {
+        $attemptId = $this->generateAttemptId();
+
+        $this->load->library('session');
+        $this->session->set_userdata('attemptId', $attemptId);
+        $user_id = $this->session->userdata('user')->user_id;
+
+        $attemptData = array(
+            'attempt_id' => $attemptId,
+            'user_id' => $user_id,
+        );
+        $this->load->model('AttemptModel');
+
+        $saveAttemptStatus = $this->AttemptModel->saveAttempt($attemptData);
+
+        return json_encode(array("attempt_status" => $saveAttemptStatus));
+    }
+
+    function generateAttemptId()
+    {
+        $this->load->model('AttemptModel');
+        // get the last answer id from the database
+        $attemptIdData = $this->AttemptModel->getLastAttemptId();
+
+        if (json_encode($attemptIdData) == "[]") {
+            $newAttemptId = "T001";
+        } else {
+            // substring it and removed  the prefix to get the integer value
+            $lastAttemptId = substr($attemptIdData[0]->attempt_id, 1);
+            // add 1 to it
+            $attemptId = intval($lastAttemptId) + 1;
+
+            $newAnswerId = "";
+            // added the prefix again, inorder to make answer id contains 4 characters
+            if ($attemptId < 10) {
+                $newAttemptId = "T00" . $attemptId;
+            } else if ($attemptId < 100) {
+                $newAttemptId = "T0" . $attemptId;
+            } else if ($attemptId < 1000) {
+                $newAttemptId = "T" . $attemptId;
+            }
+        }
+
+        return $newAttemptId;
+    }
+
+    function saveAttemptQuestion($questionId, $status)
+    {
+        $this->load->library('session');
+        $attemptId = $this->session->userdata('attemptId');
+        $attemptQuestionData = array(
+            'aq_attempt_id' => $attemptId,
+            'aq_question_id' => $questionId,
+            'status' => $status,
+        );
+        $this->load->model('AttemptModel');
+        $saveAttemptQuestionStatus = $this->AttemptModel->saveAttemptQuestion($attemptQuestionData);
+        return json_encode(array("attempt_question_status" => $attemptQuestionData));
+    }
+
+    function viewProgress()
+    {
+        $this->load->view('ProgressView');
+    }
+
+    function loadProgress()
+    {
+        $this->load->library('session');
+        $user_id = $this->session->userdata('user')->user_id;
+
+        $this->load->model('AttemptModel');
+        $attempts = $this->AttemptModel->getUserAttempts($user_id);
+
+        $attempt_scores = [];
+
+        foreach ($attempts as $attempt) {
+            $attempt_questions = $this->AttemptModel->getUserAttemptStatus($attempt->attempt_id);
+            $attempt_score = 0;
+
+            foreach ($attempt_questions as $attempt_question) {
+
+                if ($attempt_question->status == 1) {
+                    $attempt_score = $attempt_score + 1;
+                }
+            }
+            $attempt_score = $attempt_score *10;
+
+            array_push($attempt_scores, array("attempt_id" => $attempt->attempt_id, "attempt_score" => $attempt_score));
+        }
+        echo json_encode(array("question_status" => $attempt_scores));
+    }
+
 }

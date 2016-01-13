@@ -26,7 +26,7 @@ class UserModel extends CI_Model
      * @param $data
      * @return mixed
      */
-    function addNewUser($data)
+    function saveUser($data)
     {
         $this->load->database();
         $result = $this->db->insert('user',$data);

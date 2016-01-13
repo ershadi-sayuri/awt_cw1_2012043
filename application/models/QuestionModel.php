@@ -118,7 +118,7 @@ class QuestionModel extends CI_Model
      * @param $data
      * @return mixed
      */
-    function addNewQuestion($data)
+    function saveQuestion($data)
     {
         $this->load->database();
         $result = $this->db->insert('question', $data);
@@ -142,7 +142,7 @@ class QuestionModel extends CI_Model
      * @param $data
      * @return mixed
      */
-    function addNewAnswer($data)
+    function saveAnswer($data)
     {
         $this->load->database();
         $result = $this->db->insert('answer', $data);

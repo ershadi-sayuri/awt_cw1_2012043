@@ -3,7 +3,7 @@
  */
 // Define a model with some validation rules
 var UserModel = Backbone.Model.extend({
-    urlRoot: "../user/addNewUser",
+    urlRoot: "../user/saveUser",
     defaults: {
         username: '',
         password: '',

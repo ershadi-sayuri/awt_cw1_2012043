@@ -3,7 +3,7 @@
  */
 // Define a model with some validation rules
 var QuestionModel = Backbone.Model.extend({
-    urlRoot: "../question/addNewQuestion",
+    urlRoot: "../question/saveQuestion",
 
     defaults: {
         questionId:'',

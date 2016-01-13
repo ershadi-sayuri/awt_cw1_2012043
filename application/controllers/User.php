@@ -40,7 +40,7 @@ class User extends CI_Controller
      * add new user to the system
      * @return mixed
      */
-    function addNewUser()
+    function saveUser()
     {
         $userId = $this->generateUserId();
         $json_data = json_decode(file_get_contents('php://input'));
@@ -55,7 +55,7 @@ class User extends CI_Controller
         );
 
         $this->load->model('UserModel');
-        $result = $this->UserModel->addNewUser($data);
+        $result = $this->UserModel->saveUser($data);
 
         echo json_encode(array("user_status" => $result));
     }

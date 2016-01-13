@@ -24,17 +24,10 @@
 </head>
 <body id="page-top" class="index">
 
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header page-scroll">
-            <img src="../assets/img/profile_small.png">
-            <a class="navbar-brand">Ershadi's PHP Quiz</a>
-        </div>
-    </div>
-</nav>
-
 <!-- Header -->
+<?php include('HeaderMain.html'); ?>
+
+<!-- body -->
 <header>
     <div class="container text-center">
         <div class="row">
@@ -52,12 +45,17 @@
                 </div>
                 </br>
                 <form action="viewAnswerDescription" method="get">
-                    <div class="col-lg-6">
+                    <div class="col-lg-4">
                         <input class="btn btn-outline next-btn" type="submit" value="Check your answers"/>
                     </div>
                 </form>
+                <form action="viewProgress" method="get">
+                    <div class="col-lg-4">
+                        <input class="btn btn-outline next-btn" type="submit" value="View progress"/>
+                    </div>
+                </form>
                 <form method="get" action="http://localhost/awt_cw1_2012043/index.php/question/loadTenQuestionIds">
-                    <div class="col-lg-6">
+                    <div class="col-lg-4">
                         <input class="btn btn-outline next-btn" type="submit" value="Try Again"/>
                     </div>
                 </form>

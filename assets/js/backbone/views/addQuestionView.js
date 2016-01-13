@@ -66,7 +66,7 @@ var AddQuestionView = Backbone.View.extend({
         if (this.model.get("question_id") != null) {
             this.model.urlRoot = "../question/updateQuestionData/" + this.model.get("question_id");
         } else {
-            this.model.urlRoot = "../question/addNewQuestion";
+            this.model.urlRoot = "../question/saveQuestion";
         }
 
         // Check if the model is valid before saving
