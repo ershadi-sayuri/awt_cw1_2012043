@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99eef3f2-3181-4c93-92a9-393ea2e17b71" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/ProgressView.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/css/chartist.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/chartist.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/progressChart.js" />
-      <change type="DELETED" beforePath="C:\wamp\www\awt_cw1_2012043\application\controllers\Attempt.php" afterPath="" />
-      <change type="MOVED" beforePath="C:\wamp\www\awt_cw1_2012043\assets\js\backbone\models\Question.js" afterPath="$PROJECT_DIR$/assets/js/backbone/models/question.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/AttemptModel.php" afterPath="$PROJECT_DIR$/application/models/AttemptModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/FeedbackDescriptionView.php" afterPath="$PROJECT_DIR$/application/views/FeedbackDescriptionView.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/FeedbackView.php" afterPath="$PROJECT_DIR$/application/views/FeedbackView.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Question.php" afterPath="$PROJECT_DIR$/application/controllers/Question.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/QuestionModel.php" afterPath="$PROJECT_DIR$/application/models/QuestionModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/User.php" afterPath="$PROJECT_DIR$/application/controllers/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/UserModel.php" afterPath="$PROJECT_DIR$/application/models/UserModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/backbone/views/addQuestionView.js" afterPath="$PROJECT_DIR$/assets/js/backbone/views/addQuestionView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/freelancer.css" afterPath="$PROJECT_DIR$/assets/css/freelancer.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/backbone/models/user.js" afterPath="$PROJECT_DIR$/assets/js/backbone/models/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="99eef3f2-3181-4c93-92a9-393ea2e17b71" name="Default" comment="" />
     <ignored path="awt_cw1_2012043.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -83,8 +64,8 @@
       <file leaf-file-name="ProgressView.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/ProgressView.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21593292">
-              <caret line="34" column="55" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
+            <state vertical-scroll-proportion="1.3899372">
+              <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -692,12 +673,12 @@
       <workItem from="1452397620403" duration="14948000" />
       <workItem from="1452482972290" duration="8433000" />
       <workItem from="1452525867581" duration="6016000" />
-      <workItem from="1452532737529" duration="75028000" />
+      <workItem from="1452532737529" duration="75152000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="429638000" />
+    <option name="totallyTimeSpent" value="429762000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1214,8 +1195,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/ProgressView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21593292">
-          <caret line="34" column="55" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
+        <state vertical-scroll-proportion="1.3899372">
+          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
           <folding />
         </state>
       </provider>
