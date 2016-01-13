@@ -68,6 +68,7 @@
                             <span><a href="#">Need help?</a></span>
                         </div>
                     </div>
+                    <div id="signInMessage" class="text-left"></div>
                 </div>
             </form>
         </div>

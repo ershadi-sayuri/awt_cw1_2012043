@@ -25,13 +25,18 @@ var SignInForm = Backbone.View.extend({
             this.model.save(data, {
                 success: function (response) {
                     if (response.attributes.login_status == "incorrect password") {
-                        alert("incorrect password")
+                        $("#password").val("");
+                        $("#signInMessage").text("Incorrect password.");
+                        $("#signInMessage").addClass("text-warning");
                     } else if (response.attributes.login_status == "incorrect username and password") {
-                        alert("incorrect username and password");
+                        $("#username").val("");
+                        $("#password").val("");
+                        $("#signInMessage").text("Incorrect user name and password.");
+                        $("#signInMessage").addClass("text-warning");
                     } else if (response.attributes.login_status == "admin user") {
-
+                        window.location.href = "../main/loadAdminPage";
                     } else if (response.attributes.login_status == "student user") {
-
+                        window.location.href = "../question/loadTenQuestionIds";
                     }
                 },
                 error: function (error) {

@@ -23,7 +23,7 @@
 <body id="page-top">
 
 <!-- Header -->
-<?php include('Header.html'); ?>
+<?php include('HeaderMain.html'); ?>
 
 <!-- Body -->
 <header id="home">
@@ -186,18 +186,21 @@
                 <table class="table text-left">
                     <col width="80%">
                     <col width="20%">
-                    <% _.each(questions1, function(question) { %>
+                    <% var i =0;
+                    _.each(questions1, function(question) { %>
                     <tr>
                         <td><%= question.get('question') %></td>
                         <td>
                             <div class="btn-group" role="group">
                                 <a href="#edit/question/<%= question.get('question_id') %>"
                                    class="btn btn-default">Edit</a>
-                                <a href="#delete/question/<%= question.get('question_id') %>" class="btn btn-default">Delete</a>
+                                <button data-questionid="<%= question.get('question_id') %>"
+                                        id="deleteButton" class="btn btn-default" data-index="<%= i %>">Delete</button>
                             </div>
                         </td>
                     </tr>
-                    <% }); %>
+                    <% i++;
+                    }); %>
                 </table>
             </div>
         </div>

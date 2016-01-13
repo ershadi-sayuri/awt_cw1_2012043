@@ -12,6 +12,8 @@ class Main extends CI_Controller
     function loadHomePage()
     {
         $this->load->view('Home');
+        $this->load->library('session');
+        $this->session->unset_userdata();
     }
 
     // loads the sign up page of the quiz app

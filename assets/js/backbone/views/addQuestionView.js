@@ -86,5 +86,6 @@ var AddQuestionView = Backbone.View.extend({
         // Remove the validation binding
         Backbone.Validation.unbind(this);
         return Backbone.View.prototype.remove.apply(this, arguments);
-    },
+    }
+
 });

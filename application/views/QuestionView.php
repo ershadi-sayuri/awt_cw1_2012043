@@ -24,7 +24,7 @@
 <body id="page-top" class="index">
 
 <!-- Header -->
-<?php include('Header.html'); ?>
+<?php include('HeaderMain.html'); ?>
 
 <!-- Header -->
 <header>

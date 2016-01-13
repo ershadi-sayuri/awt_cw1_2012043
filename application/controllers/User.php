@@ -80,18 +80,21 @@ class User extends CI_Controller
 
         if (!empty($result)) {
             // check if the passwords are equal
-            if (crypt($json_data->{'username'}, $result[0]->password) == $result[0]->password) {
+            if (crypt($json_data->{'password'}, $result[0]->password) == $result[0]->password) {
 
                 // check whether the user is an administrator or a student
                 // roo1 id admin
                 // r002 id student
                 if ($result[0]->role_id == "r001") {
-                    // load admin view
+                    // admin
+                    // load the session library
+                    $this->load->library('session');
+                    $this->session->set_userdata('user', $result[0]);
                     echo json_encode(array("login_status" => "admin user"));
-                    $this->load->view('AdminView');
                 } else if ($result[0]->role_id == "r002") {
-                    echo "student";
-                    // load question view
+                    // student
+                    $this->load->library('session');
+                    $this->session->set_userdata('user', $result[0]);
                     echo json_encode(array("login_status" => "student user"));
                 }
             } else {
@@ -115,10 +118,11 @@ class User extends CI_Controller
         echo json_encode($users);
     }
 
-    function deleteUser(){
+    function deleteUser()
+    {
         $user_id = $this->uri->segment(3);
         $this->load->model('UserModel');
-        $delete_user_status = $this->UserModel->deleteUser( $user_id);
+        $delete_user_status = $this->UserModel->deleteUser($user_id);
         echo json_encode(array("delete_user_status" => $delete_user_status));
     }
 }

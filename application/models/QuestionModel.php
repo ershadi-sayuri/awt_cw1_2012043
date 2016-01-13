@@ -167,6 +167,7 @@ class QuestionModel extends CI_Model
 
     function deleteQuestion($question_id)
     {
+        $this->load->database();
         $this->db->where('question_id', $question_id);
         $result = $this->db->delete('question');
         return $result;
@@ -174,6 +175,7 @@ class QuestionModel extends CI_Model
 
     function deleteAnswer($question_id)
     {
+        $this->load->database();
         $this->db->where('question_id', $question_id);
         $result = $this->db->delete('answer');
         return $result;

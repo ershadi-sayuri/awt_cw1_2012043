@@ -99,7 +99,6 @@ var AdminConsoleRouter = Backbone.Router.extend({
         $("#content_right").empty();
         $("#content_right").html(editView.render(id).el);
     }
-
 });
 
 var adminConsoleRouter = new AdminConsoleRouter();
